@@ -229,7 +229,7 @@ export default function CertificatesPage() {
                   <div key={tpl.id} className="border border-slate-200 rounded-2xl overflow-hidden group hover:shadow-md transition-all">
                     <div className="aspect-[4/3] bg-slate-100 relative overflow-hidden">
                       {tpl.backgroundUrl ? (
-                        <img src={`http://localhost:3001${tpl.backgroundUrl}`} alt={tpl.name} className="w-full h-full object-contain p-2" />
+                        <img src={`${process.env.NEXT_PUBLIC_API_URL || 'https://stitchdivineministryecosystem-production.up.railway.app'}${tpl.backgroundUrl}`} alt={tpl.name} className="w-full h-full object-contain p-2" />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center text-slate-300">
                           <LayoutTemplate size={48} />

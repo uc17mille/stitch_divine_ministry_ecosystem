@@ -175,7 +175,7 @@ export default function CreateCoursePage() {
         title: courseTitle,
         description: courseDesc || 'No description provided.',
         thumbnailUrl: thumbnailFile 
-          ? `http://localhost:3001/uploads/${thumbnailFile.name}` 
+          ? `${process.env.NEXT_PUBLIC_API_URL || 'https://stitchdivineministryecosystem-production.up.railway.app'}/uploads/${thumbnailFile.name}` 
           : 'https://images.unsplash.com/photo-1438283173091-5dbf5c5a3206?auto=format&fit=crop&q=80&w=800',
         categoryId: selectedCategoryId,
         format: courseFormat,
@@ -187,10 +187,10 @@ export default function CreateCoursePage() {
               title: mod.title || `Lesson 1`,
               content: mod.description || `Welcome to ${mod.title || 'this module'}.`,
               videoUrl: (courseFormat === 'VIDEO' || courseFormat === 'BOTH') 
-                ? (mod.mediaType === 'embed' ? mod.mediaUrl : (mod.fileName ? `http://localhost:3001/uploads/${mod.fileName}` : undefined))
+                ? (mod.mediaType === 'embed' ? mod.mediaUrl : (mod.fileName ? `${process.env.NEXT_PUBLIC_API_URL || 'https://stitchdivineministryecosystem-production.up.railway.app'}/uploads/${mod.fileName}` : undefined))
                 : undefined,
               audioUrl: (courseFormat === 'AUDIO' || courseFormat === 'BOTH')
-                ? (mod.audioMediaType === 'embed' ? mod.audioUrl : (mod.audioFileName ? `http://localhost:3001/uploads/${mod.audioFileName}` : undefined))
+                ? (mod.audioMediaType === 'embed' ? mod.audioUrl : (mod.audioFileName ? `${process.env.NEXT_PUBLIC_API_URL || 'https://stitchdivineministryecosystem-production.up.railway.app'}/uploads/${mod.audioFileName}` : undefined))
                 : undefined,
               resources: mod.pdfTitle && mod.pdfUrl ? {
                 create: [
