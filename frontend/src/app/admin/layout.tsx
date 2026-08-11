@@ -2,8 +2,8 @@
 
 import { useAuthStore } from '@/store/authStore';
 import { useRouter, usePathname } from 'next/navigation';
-import { useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { toast } from 'sonner';
 
@@ -11,6 +11,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const { user, logout } = useAuthStore();
   const router = useRouter();
   const pathname = usePathname();
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     if (user && user.role !== 'ADMINISTRATOR' && user.role !== 'admin') {
@@ -33,11 +34,51 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   ];
 
   return (
-    <div className="bg-slate-50 text-slate-900 overflow-x-hidden min-h-screen flex selection:bg-indigo-500/20 font-sans">
+    <div className="bg-slate-50 text-slate-900 overflow-x-hidden min-h-screen flex flex-col md:flex-row selection:bg-indigo-500/20 font-sans">
       
+      {/* MOBILE STICKY TOP HEADER */}
+      <header className="sticky top-0 z-40 md:hidden w-full bg-white/90 backdrop-blur-xl border-b border-slate-200/80 px-4 py-3 flex items-center justify-between shadow-sm">
+        <div className="flex items-center gap-3">
+          <button 
+            onClick={() => setMobileOpen(!mobileOpen)} 
+            className="p-2 bg-slate-100 hover:bg-slate-200 rounded-xl text-slate-800 transition-all active:scale-95"
+            aria-label="Toggle menu"
+          >
+            <span className="material-symbols-outlined text-[22px]">{mobileOpen ? 'close' : 'menu'}</span>
+          </button>
+          <Link href="/admin" className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white font-bold text-sm shadow-md">
+              A
+            </div>
+            <span className="font-extrabold text-slate-900 tracking-tight text-base">Admin Panel</span>
+          </Link>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <span className="px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wider bg-violet-50 text-violet-700 border border-violet-100 rounded-md">
+            Admin
+          </span>
+        </div>
+      </header>
+
+      {/* MOBILE OVERLAY */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setMobileOpen(false)}
+            className="fixed inset-0 bg-slate-950/40 backdrop-blur-sm z-40 md:hidden"
+          />
+        )}
+      </AnimatePresence>
+
       {/* ---------------- SIDEBAR ---------------- */}
-      <aside className="h-screen w-72 fixed left-0 top-0 bg-slate-50 border-r border-slate-200/80 z-50 flex flex-col py-8 px-5">
-        <div className="mb-12 px-3">
+      <aside className={`h-screen w-72 fixed left-0 top-0 bg-slate-50 border-r border-slate-200/80 z-50 flex flex-col py-8 px-5 transition-transform duration-300 shadow-xl md:shadow-none ${
+        mobileOpen ? 'translate-x-0' : '-translate-x-full'
+      } md:translate-x-0`}>
+        <div className="mb-8 px-3">
           <div className="flex items-center gap-3 mb-2">
             <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white font-bold text-xl shadow-md">
               A
@@ -49,11 +90,11 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           </div>
         </div>
 
-        <nav className="flex-1 space-y-1">
+        <nav className="flex-1 space-y-1 overflow-y-auto scrollbar-hide">
           {sidebarLinks.map((link) => {
             const isActive = pathname === link.path;
             return (
-              <Link key={link.name} href={link.path}>
+              <Link key={link.name} href={link.path} onClick={() => setMobileOpen(false)}>
                 <div 
                   className={`w-full flex items-center px-4 py-3 rounded-2xl transition-colors duration-150 relative group overflow-hidden ${
                     isActive 
@@ -71,7 +112,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
         <div className="mt-auto pt-6 space-y-3">
           <div className="flex items-center gap-3 p-3 bg-white border border-slate-200/60 rounded-2xl shadow-sm">
-            <img className="w-10 h-10 rounded-full object-cover ring-2 ring-slate-100" alt="Admin User" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB724ISuVK9wzGZOXljNO7BkVLd2Kf4yte-edBzZGuNDYfnwTO2ig8khUuxNUYadFI0YudWR0J-QnHFetLHh9713wbJiyaqNIQFjsWDXtKZ8qfHToyfqqjy9sN3_N3FtTWe7e7DcnflOzhQHg1sv9L079T7tqhvK__RLbrzONttnRlVazhv7UR1Ivk_jEZP1_3X_JSKU5X2cjwyzxCntJhgQ7A9hxVT-iWAQkLk3SPf7CS41q-zFch" />
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white font-bold text-sm">
+              {user?.profile?.firstName?.[0] || 'A'}
+            </div>
             <div className="overflow-hidden flex-1">
               <p className="text-sm font-bold text-slate-900 truncate">{user?.profile ? `${user.profile.firstName} ${user.profile.lastName}` : 'Admin User'}</p>
               <p className="text-[11px] font-medium text-slate-500 truncate mt-0.5">{user?.email || 'admin@auramini.com'}</p>
@@ -92,35 +135,30 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       </aside>
 
       {/* ---------------- MAIN CANVAS ---------------- */}
-      <main className="ml-72 flex-1 min-h-screen pb-12">
+      <main className="md:ml-72 flex-1 min-h-screen pb-12 w-full min-w-0">
         
         {/* Top Header */}
-        <header className="sticky top-0 z-40 w-full h-20 flex justify-between items-center px-20 bg-slate-50/95 border-b border-slate-200/60">
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/5 to-violet-500/5 opacity-50"></div>
-          
-          <div className="flex items-center flex-1 relative z-10">
-            <div className="relative w-96 max-w-full group">
+        <header className="sticky top-0 z-30 w-full min-h-[4rem] flex flex-col sm:flex-row justify-between items-start sm:items-center px-4 sm:px-8 lg:px-16 py-3 bg-slate-50/95 border-b border-slate-200/60 gap-3">
+          <div className="flex items-center w-full sm:w-auto flex-1 relative z-10">
+            <div className="relative w-full sm:w-96 max-w-full group">
               <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-indigo-500 transition-colors" style={{ fontVariationSettings: "'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24" }}>search</span>
               <input 
-                className="w-full bg-white border border-slate-200/80 rounded-full pl-12 pr-4 py-2.5 text-sm font-medium focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all shadow-sm placeholder-slate-400" 
-                placeholder="Search resources, users, or donations..." 
+                className="w-full bg-white border border-slate-200/80 rounded-full pl-12 pr-4 py-2 text-sm font-medium focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all shadow-sm placeholder-slate-400" 
+                placeholder="Search resources, users, or courses..." 
                 type="text" 
               />
             </div>
           </div>
           
-          <div className="flex items-center gap-6 relative z-10">
-            <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="flex items-center gap-2 bg-slate-900 text-white px-5 py-2.5 rounded-full font-bold text-sm shadow-md hover:shadow-lg hover:bg-slate-800 transition-all">
-              <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24" }}>add</span>
-              New Prayer Request
+          <div className="flex items-center justify-between w-full sm:w-auto gap-4 relative z-10">
+            <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="flex items-center gap-2 bg-slate-900 text-white px-4 py-2 rounded-full font-bold text-xs shadow-md hover:bg-slate-800 transition-all">
+              <span className="material-symbols-outlined text-[16px]">add</span>
+              New Course
             </motion.button>
             <div className="flex items-center gap-2 text-slate-500">
-              <button className="relative p-2.5 rounded-full hover:bg-slate-200/50 hover:text-slate-900 transition-colors">
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24" }}>notifications</span>
-                <span className="absolute top-2 right-2.5 w-2 h-2 bg-rose-500 rounded-full ring-2 ring-slate-50"></span>
-              </button>
-              <button className="p-2.5 rounded-full hover:bg-slate-200/50 hover:text-slate-900 transition-colors">
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24" }}>chat_bubble</span>
+              <button className="relative p-2 rounded-full hover:bg-slate-200/50 hover:text-slate-900 transition-colors">
+                <span className="material-symbols-outlined text-[20px]">notifications</span>
+                <span className="absolute top-1.5 right-2 w-2 h-2 bg-rose-500 rounded-full ring-2 ring-slate-50"></span>
               </button>
             </div>
           </div>

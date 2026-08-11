@@ -2,8 +2,8 @@
 
 import { useAuthStore } from '@/store/authStore';
 import { useRouter, usePathname } from 'next/navigation';
-import { useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { toast } from 'sonner';
 
@@ -11,6 +11,7 @@ export default function MentorLayout({ children }: { children: React.ReactNode }
   const { user, logout } = useAuthStore();
   const router = useRouter();
   const pathname = usePathname();
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     if (user && user.role !== 'MENTOR') {
@@ -30,10 +31,50 @@ export default function MentorLayout({ children }: { children: React.ReactNode }
   ];
 
   return (
-    <div className="bg-slate-50 text-slate-900 overflow-x-hidden min-h-screen flex selection:bg-teal-500/20 font-sans">
+    <div className="bg-slate-50 text-slate-900 overflow-x-hidden min-h-screen flex flex-col md:flex-row selection:bg-teal-500/20 font-sans">
       
+      {/* MOBILE STICKY TOP HEADER */}
+      <header className="sticky top-0 z-40 md:hidden w-full bg-white/90 backdrop-blur-xl border-b border-slate-200/80 px-4 py-3 flex items-center justify-between shadow-sm">
+        <div className="flex items-center gap-3">
+          <button 
+            onClick={() => setMobileOpen(!mobileOpen)} 
+            className="p-2 bg-slate-100 hover:bg-slate-200 rounded-xl text-slate-800 transition-all active:scale-95"
+            aria-label="Toggle menu"
+          >
+            <span className="material-symbols-outlined text-[22px]">{mobileOpen ? 'close' : 'menu'}</span>
+          </button>
+          <Link href="/mentor" className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-teal-500 to-emerald-600 flex items-center justify-center text-white font-bold text-sm shadow-md">
+              M
+            </div>
+            <span className="font-extrabold text-slate-900 tracking-tight text-base">Mentor Hub</span>
+          </Link>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <span className="px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wider bg-teal-50 text-teal-700 border border-teal-100 rounded-md">
+            Mentor
+          </span>
+        </div>
+      </header>
+
+      {/* MOBILE OVERLAY */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setMobileOpen(false)}
+            className="fixed inset-0 bg-slate-950/40 backdrop-blur-sm z-40 md:hidden"
+          />
+        )}
+      </AnimatePresence>
+
       {/* ---------------- SIDEBAR (2026 SAAS) ---------------- */}
-      <aside className="h-screen w-72 fixed left-0 top-0 bg-white/95 backdrop-blur-2xl border-r border-slate-200/80 z-50 flex flex-col py-6 px-4 shadow-xl shadow-slate-900/5">
+      <aside className={`h-screen w-72 fixed left-0 top-0 bg-white/95 backdrop-blur-2xl border-r border-slate-200/80 z-50 flex flex-col py-6 px-4 shadow-xl md:shadow-none transition-transform duration-300 ${
+        mobileOpen ? 'translate-x-0' : '-translate-x-full'
+      } md:translate-x-0`}>
         
         {/* LOGO */}
         <div className="mb-8 px-3">
@@ -68,7 +109,7 @@ export default function MentorLayout({ children }: { children: React.ReactNode }
           {sidebarLinks.map((link) => {
             const isActive = pathname === link.path;
             return (
-              <Link key={link.name} href={link.path}>
+              <Link key={link.name} href={link.path} onClick={() => setMobileOpen(false)}>
                 <div 
                   className={`w-full flex items-center px-3.5 py-2.5 rounded-xl transition-all duration-200 relative group overflow-hidden ${
                     isActive 
@@ -117,38 +158,35 @@ export default function MentorLayout({ children }: { children: React.ReactNode }
       </aside>
 
       {/* ---------------- MAIN CANVAS ---------------- */}
-      <main className="ml-72 flex-1 min-h-screen pb-12">
+      <main className="md:ml-72 flex-1 min-h-screen pb-12 w-full min-w-0">
         
         {/* TOP HEADER */}
-        <header className="sticky top-0 z-40 w-full h-20 flex justify-between items-center px-10 lg:px-16 bg-white/80 backdrop-blur-xl border-b border-slate-200/80 shadow-sm">
-          <div className="flex items-center flex-1 relative z-10">
-            <div className="relative w-96 max-w-full group">
+        <header className="sticky top-0 z-30 w-full min-h-[4rem] flex flex-col sm:flex-row justify-between items-start sm:items-center px-4 sm:px-8 lg:px-16 py-3 bg-white/80 backdrop-blur-xl border-b border-slate-200/80 shadow-sm gap-3">
+          <div className="flex items-center w-full sm:w-auto flex-1 relative z-10">
+            <div className="relative w-full sm:w-96 max-w-full group">
               <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-teal-500 transition-colors" style={{ fontVariationSettings: "'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24" }}>search</span>
               <input 
-                className="w-full bg-slate-50 border border-slate-200 rounded-full pl-12 pr-4 py-2.5 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 focus:bg-white transition-all shadow-inner placeholder-slate-400" 
+                className="w-full bg-slate-50 border border-slate-200 rounded-full pl-12 pr-4 py-2 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 focus:bg-white transition-all shadow-inner placeholder-slate-400" 
                 placeholder="Search students, sessions, or tracks..." 
                 type="text" 
               />
             </div>
           </div>
           
-          <div className="flex items-center gap-4 relative z-10">
+          <div className="flex items-center justify-between w-full sm:w-auto gap-4 relative z-10">
             <motion.button 
               whileHover={{ scale: 1.02 }} 
               whileTap={{ scale: 0.98 }} 
-              className="flex items-center gap-2 bg-gradient-to-r from-teal-600 to-emerald-600 text-white px-5 py-2.5 rounded-full font-extrabold text-xs shadow-md hover:shadow-lg shadow-teal-500/20 transition-all"
+              className="flex items-center gap-2 bg-gradient-to-r from-teal-600 to-emerald-600 text-white px-4 py-2 rounded-full font-extrabold text-xs shadow-md hover:shadow-lg shadow-teal-500/20 transition-all"
             >
-              <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24" }}>event</span>
+              <span className="material-symbols-outlined text-[16px]">event</span>
               Schedule Session
             </motion.button>
             
             <div className="flex items-center gap-1 text-slate-500 border-l border-slate-200 pl-4">
-              <button className="relative p-2.5 rounded-full hover:bg-slate-100 hover:text-slate-900 transition-colors">
-                <span className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: "'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24" }}>notifications</span>
-                <span className="absolute top-2 right-2.5 w-2 h-2 bg-rose-500 rounded-full ring-2 ring-white"></span>
-              </button>
-              <button className="p-2.5 rounded-full hover:bg-slate-100 hover:text-slate-900 transition-colors">
-                <span className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: "'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24" }}>chat_bubble</span>
+              <button className="relative p-2 rounded-full hover:bg-slate-100 hover:text-slate-900 transition-colors">
+                <span className="material-symbols-outlined text-[20px]">notifications</span>
+                <span className="absolute top-1.5 right-2 w-2 h-2 bg-rose-500 rounded-full ring-2 ring-white"></span>
               </button>
             </div>
           </div>

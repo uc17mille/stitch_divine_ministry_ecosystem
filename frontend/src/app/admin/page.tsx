@@ -41,7 +41,7 @@ export default function AdminDashboardPage() {
       variants={containerVariants}
       initial="hidden"
       animate="show"
-      className="max-w-[1600px] mx-auto space-y-6 font-sans text-slate-900 pb-12 px-8 sm:px-12 lg:px-20 pt-8"
+      className="max-w-[1600px] mx-auto space-y-6 font-sans text-slate-900 pb-12 px-4 sm:px-8 lg:px-12 xl:px-20 pt-4 sm:pt-8"
     >
       
       {/* 1. TOP ROW: LIVE KPI CARDS */}
