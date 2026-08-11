@@ -16,57 +16,70 @@ export class PrismaService extends PrismaClient implements OnModuleInit, OnModul
     }
   }
 
-  private async autoSeed() {
+  public async autoSeed() {
     try {
       console.log('🌱 Checking and seeding ecosystem accounts & data...');
 
-      // 1. Categories
+      // 1. User Accounts (Seeded FIRST with individual try-catches to guarantee login!)
+      const adminHash = await bcrypt.hash('Admin@12345', 12);
+      try {
+        await this.user.upsert({
+          where: { email: 'admin@auramini.com' },
+          update: { passwordHash: adminHash },
+          create: {
+            email: 'admin@auramini.com',
+            passwordHash: adminHash,
+            role: 'ADMINISTRATOR',
+            profile: { create: { firstName: 'Aura', lastName: 'Admin', bio: 'Platform administrator' } },
+          },
+        });
+      } catch (e) {
+        console.error('Failed to seed admin user:', e);
+      }
+
+      const mentorHash = await bcrypt.hash('Mentor@12345', 12);
+      let mentor;
+      try {
+        mentor = await this.user.upsert({
+          where: { email: 'mentor@auramini.com' },
+          update: { passwordHash: mentorHash },
+          create: {
+            email: 'mentor@auramini.com',
+            passwordHash: mentorHash,
+            role: 'MENTOR',
+            profile: { create: { firstName: 'Dr. Elias', lastName: 'Thorne', bio: 'Senior pastor and leadership coach with 20 years of ministry experience.' } },
+          },
+        });
+      } catch (e) {
+        console.error('Failed to seed mentor user:', e);
+      }
+
+      const studentHash = await bcrypt.hash('Student@12345', 12);
+      try {
+        await this.user.upsert({
+          where: { email: 'student@auramini.com' },
+          update: { passwordHash: studentHash },
+          create: {
+            email: 'student@auramini.com',
+            passwordHash: studentHash,
+            role: 'STUDENT',
+            profile: { create: { firstName: 'Grace', lastName: 'Adeyemi' } },
+          },
+        });
+      } catch (e) {
+        console.error('Failed to seed student user:', e);
+      }
+
+      // 2. Categories
       const cat1 = await this.courseCategory.upsert({ where: { name: 'Leadership' }, update: {}, create: { name: 'Leadership', description: 'Ministry leadership courses' } });
       const cat2 = await this.courseCategory.upsert({ where: { name: 'Theology' }, update: {}, create: { name: 'Theology', description: 'Biblical theology courses' } });
       const cat3 = await this.courseCategory.upsert({ where: { name: 'Worship' }, update: {}, create: { name: 'Worship', description: 'Worship and music ministry' } });
 
-      // 2. Prayer Categories
+      // 3. Prayer Categories
       await this.prayerCategory.upsert({ where: { name: 'Health & Healing' }, update: {}, create: { name: 'Health & Healing' } });
       await this.prayerCategory.upsert({ where: { name: 'Financial Breakthrough' }, update: {}, create: { name: 'Financial Breakthrough' } });
       await this.prayerCategory.upsert({ where: { name: 'Family & Relationships' }, update: {}, create: { name: 'Family & Relationships' } });
       await this.prayerCategory.upsert({ where: { name: 'Spiritual Growth' }, update: {}, create: { name: 'Spiritual Growth' } });
-
-      // 3. User Accounts (Unconditional Upsert to guarantee login works!)
-      const adminHash = await bcrypt.hash('Admin@12345', 12);
-      await this.user.upsert({
-        where: { email: 'admin@auramini.com' },
-        update: { passwordHash: adminHash },
-        create: {
-          email: 'admin@auramini.com',
-          passwordHash: adminHash,
-          role: 'ADMINISTRATOR',
-          profile: { create: { firstName: 'Aura', lastName: 'Admin', bio: 'Platform administrator' } },
-        },
-      });
-
-      const mentorHash = await bcrypt.hash('Mentor@12345', 12);
-      const mentor = await this.user.upsert({
-        where: { email: 'mentor@auramini.com' },
-        update: { passwordHash: mentorHash },
-        create: {
-          email: 'mentor@auramini.com',
-          passwordHash: mentorHash,
-          role: 'MENTOR',
-          profile: { create: { firstName: 'Dr. Elias', lastName: 'Thorne', bio: 'Senior pastor and leadership coach with 20 years of ministry experience.' } },
-        },
-      });
-
-      const studentHash = await bcrypt.hash('Student@12345', 12);
-      await this.user.upsert({
-        where: { email: 'student@auramini.com' },
-        update: { passwordHash: studentHash },
-        create: {
-          email: 'student@auramini.com',
-          passwordHash: studentHash,
-          role: 'STUDENT',
-          profile: { create: { firstName: 'Grace', lastName: 'Adeyemi' } },
-        },
-      });
 
       // 4. Courses with Modules & Lessons (if empty)
       const courseCount = await this.course.count();
