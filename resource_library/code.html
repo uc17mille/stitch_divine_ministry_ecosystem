@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Resource Library | Aura Ecosystem</title>
+<script type='text/javascript' nonce='PddBrJiirm+SqdhQBpsjQQ==' src='https://contribution.usercontent.google.com/a9HWFuBLc01YWV5uMIIPounIgIeP82YWvWmfDf4sdw1KlTD_wiUPXsk280R_6M4qH7cX16WzOKCMXhSAynk1RkIRQpgUBSMKmVYgqVDLn2nROpydGan3oPK3v8-YoSq4EjSOb1OqaCZaXjpDoqf9lhdFxG7nP-sE-IViRYmZeD4VUuHtzjk7HqxRZlMNUBk2-cG5zAvsqn8J2vV8RYN0jFjZMsZuMsVy4Kw9Sj27oyQfHY99g8HUqb57btqcAtqElCFSvS386Q8tgcUKilHYGJ-jmQDbjqDEpQXD_t4fRmfaDaeb30yyZzkQOFgvaFbqaAqfFbHgbHsy2Jkv78P98okc6imEppN6zEiTxNBb59xfhtnf9c5Ka870mZQdtsMwP2QLFBkoG9SJdSKmqbK2s2dZKQEUwpR0BhbCHTLxeYxCcaw3edrgnh-5lWo42E0j9kKn7nmgb5EXAaK8ERE_xrleHBgFwqVNj9SHAorXjwc6Db74FVWkkp1giOcctLYIOEz5B8P2Gjn4fTT26ymFHYwfnyxvLUf21wW-og9X1HDGJzNbHrzfEbpOPS4vGYU8IwAfRIKmtsmWeiVU0kQ3R4ut4UFkWHbScrH2B0aF6mKeURhal5_voZ_CizNOw4upTmLrRX_1hRQhiYjBiMWkQ12cGDTn2rU_9050Qj9T9AeghBNrEjZaPIVpVnX_dJq88aZH1p4cDLcr1mYr-njh1Bwvs3obpb6jg66RO_JY8Hof1uVszQt9z29MpJz2h97GM2q2WItv99McrL3ChyMow4judAZMXdd4FR0UNNDPu-Ouq_O8k_g5'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Geist+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c4c5d5;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #757684;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#38485d",
+                        "on-primary-container": "#a8b8ff",
+                        "surface-container-highest": "#dae2fd",
+                        "surface-variant": "#dae2fd",
+                        "secondary-fixed": "#d3e4fe",
+                        "outline-variant": "#c4c5d5",
+                        "inverse-on-surface": "#eef0ff",
+                        "primary": "#00288e",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#0b1c30",
+                        "on-tertiary-fixed-variant": "#802a00",
+                        "on-background": "#131b2e",
+                        "inverse-surface": "#283044",
+                        "secondary-container": "#d0e1fb",
+                        "surface-container-low": "#f2f3ff",
+                        "surface": "#faf8ff",
+                        "surface-bright": "#faf8ff",
+                        "primary-fixed": "#dde1ff",
+                        "on-tertiary-fixed": "#380d00",
+                        "primary-fixed-dim": "#b8c4ff",
+                        "on-error-container": "#93000a",
+                        "background": "#faf8ff",
+                        "on-surface-variant": "#444653",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#ffdbce",
+                        "on-secondary-container": "#54647a",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "on-surface": "#131b2e",
+                        "tertiary-container": "#872d00",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "inverse-primary": "#b8c4ff",
+                        "tertiary": "#611e00",
+                        "on-primary-fixed": "#001453",
+                        "secondary": "#505f76",
+                        "on-primary-fixed-variant": "#173bab",
+                        "on-tertiary-container": "#ffa583",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#ffb59a",
+                        "primary-container": "#1e40af",
+                        "surface-dim": "#d2d9f4",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e2e7ff",
+                        "surface-container": "#eaedff",
+                        "on-primary": "#ffffff",
+                        "outline": "#757684",
+                        "surface-tint": "#3755c3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin": "32px",
+                        "md": "16px",
+                        "3xl": "64px",
+                        "xl": "32px",
+                        "base": "8px",
+                        "2xl": "48px",
+                        "sm": "8px",
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "lg": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "label-md": ["Geist"],
+                        "body-sm": ["Geist"],
+                        "display": ["Geist"],
+                        "body-md": ["Geist"],
+                        "label-sm": ["Geist"],
+                        "headline-lg": ["Geist"],
+                        "mono": ["Geist Mono"],
+                        "body-lg": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                        "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "mono": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+<!-- Sidebar Navigation (SideNavBar) -->
+<aside class="fixed left-0 top-0 h-full w-[280px] bg-surface border-r border-outline-variant/20 flex flex-col p-md gap-sm z-[60] hidden md:flex">
+<div class="flex items-center gap-md mb-xl px-sm">
+<div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">auto_awesome</span>
+</div>
+<div>
+<h1 class="font-headline-md text-headline-md font-black text-primary tracking-tight">Aura</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Digital Ministry</p>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-xs">
+<a class="flex items-center gap-md px-md py-sm text-on-surface-variant hover:bg-surface-container-low rounded-xl transition-all hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm bg-primary-container text-on-primary-container rounded-xl font-medium transition-all hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="font-label-md text-label-md">Academy</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm text-on-surface-variant hover:bg-surface-container-low rounded-xl transition-all hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">play_circle</span>
+<span class="font-label-md text-label-md">Lessons</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm text-on-surface-variant hover:bg-surface-container-low rounded-xl transition-all hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">diversity_3</span>
+<span class="font-label-md text-label-md">Mentorship</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm text-on-surface-variant hover:bg-surface-container-low rounded-xl transition-all hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">forum</span>
+<span class="font-label-md text-label-md">Community</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm text-on-surface-variant hover:bg-surface-container-low rounded-xl transition-all hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">folded_hands</span>
+<span class="font-label-md text-label-md">Prayer Center</span>
+</a>
+</nav>
+<div class="mt-auto pt-xl border-t border-outline-variant/10">
+<div class="bg-surface-container rounded-2xl p-md flex flex-col gap-md">
+<p class="font-label-md text-label-md text-on-surface leading-snug">Empower your ministry journey.</p>
+<button class="bg-primary text-on-primary px-md py-base rounded-xl font-label-md text-label-md active:scale-95 transition-transform">
+                    Upgrade to Premium
+                </button>
+</div>
+<div class="mt-md flex items-center gap-md px-sm">
+<img class="w-10 h-10 rounded-full border border-outline-variant/30" data-alt="A professional portrait of a ministry leader, soft studio lighting, neutral background, high-end professional aesthetic, calm and focused expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3I_Jy6PUAVs7tMmQLhoHAWwmhfAqV4lgkE-mUc5KGTxaDdPlsmRwgEo4RrQvcPgvbUIKaK31n___Lu49la8flUcL42mb9XC6nyV2DS924tSNwmoedwrmSy2H9F_iOQlr98qgnhLifwmXj-urWz-rQh8QFS_VqBb8rK4H_6PkV2b9mBB1GRqLRmY4RdFm3wtulVfo5abtQeL7kob0nEEqg-Ed1nCu3-K173laEPaPOGE-uoJyK20Za"/>
+<div class="flex-1 min-w-0">
+<p class="font-label-md text-label-md text-on-surface truncate">Admin User</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Premium Plan</p>
+</div>
+<span class="material-symbols-outlined text-outline">settings</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="md:ml-[280px] min-h-screen flex flex-col">
+<!-- Top Navigation (TopNavBar) -->
+<header class="fixed top-0 right-0 left-0 md:left-[280px] z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm flex justify-between items-center px-lg py-md">
+<div class="flex items-center gap-lg flex-1">
+<div class="relative w-full max-w-md hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-10 pr-md py-2 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-body-sm text-body-sm" placeholder="Search resources, manuals, or teachings..." type="text"/>
+</div>
+<div class="lg:hidden">
+<h2 class="font-headline-md text-headline-md font-bold text-primary">Library</h2>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors duration-200 active:scale-95">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors duration-200 active:scale-95">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="h-8 w-[1px] bg-outline-variant/30 mx-xs"></div>
+<button class="flex items-center gap-sm px-sm py-1 hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="font-label-md text-label-md text-primary font-bold">Profile</span>
+<img class="w-8 h-8 rounded-full border border-primary/20" data-alt="A small circular avatar placeholder for a profile icon, clean and minimalist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBm8E2n6zmhLwllD-uCnkAOCi2Bx3Gq3ldgwXBFdfWjdfKRTWixju_kQ6NMogtFzX64F4wtLlbzdkaseYkoffnPGGHpTNRgQth3aiO8qGYyTIyjIxKDbbOXTSsFzys4ovxqVNAWEbL1jTo2z011unGi1a8NRRDAtcLNLo6jp8_z-nZ4QW7O3ArtEXK3bY8cWJXj_reJ4Xfi8r2nARLUHkIfCQ0CvFCIkdNt-R_1iRIP6gNVIZprtuNO"/>
+</button>
+</div>
+</header>
+<div class="mt-20 px-lg py-xl flex flex-col gap-3xl max-w-[1600px] mx-auto w-full">
+<!-- Hero Section: Featured Resource -->
+<section class="relative h-[480px] rounded-[32px] overflow-hidden flex items-center group">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A sophisticated book cover design for &#39;The 2024 Ministry Leadership Handbook&#39;, featuring minimalist typography, a clean geometric pattern, and deep blue and white accents. Professional, high-end, and corporate aesthetic." style="background-image: url(&#39;https://lh3.googleusercontent.com/aida-public/AB6AXuAynY41KGjSYrtxErS5Xhqov8lIqecRquezPPc3z-lzDBMq7wLDxCTfHaRYAbWMY_-Xj2JI3HUSFG4V-T-XP8y-fQz6XP_tjJq9QoOAGJHnW_w51JOYCdG_t3VhViiS9AE1rY1u_ESrO8dSR3bstMbo-v20J_Ft1uLAUh5kiPMYRFOLLs-FLmsacPJHozhmhggj4upGtC59Wk40pL7HAmjG67340p-AkEIP33zh12Fqyb55zB9zMMdx&#39;)"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full lg:w-1/2 p-2xl flex flex-col gap-lg">
+<span class="font-label-sm text-label-sm px-md py-1 bg-primary text-on-primary rounded-full w-fit uppercase tracking-widest font-bold">Featured Resource</span>
+<h2 class="font-display text-display text-on-background leading-tight">The 2024 Ministry <br/> Leadership Handbook</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">A comprehensive guide to scaling your ministry’s digital and spiritual impact in the modern era. Includes strategic frameworks and operation manuals.</p>
+<div class="flex items-center gap-md">
+<button class="bg-primary text-on-primary px-xl py-md rounded-xl font-headline-md text-label-md flex items-center gap-md active:scale-95 transition-transform">
+                            Read Now
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-surface/50 backdrop-blur-md border border-outline-variant/30 text-on-surface px-xl py-md rounded-xl font-headline-md text-label-md flex items-center gap-md hover:bg-surface transition-all active:scale-95">
+<span class="material-symbols-outlined">bookmark</span>
+                            Save
+                        </button>
+</div>
+</div>
+</section>
+<!-- Filters & Category Navigation -->
+<section class="flex flex-col gap-lg">
+<div class="flex items-center justify-between border-b border-outline-variant/20 pb-md">
+<div class="flex items-center gap-xl overflow-x-auto no-scrollbar">
+<button class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-md whitespace-nowrap">All Resources</button>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary pb-md whitespace-nowrap transition-colors">Books &amp; Manuals</button>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary pb-md whitespace-nowrap transition-colors">Video Teachings</button>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary pb-md whitespace-nowrap transition-colors">Audio Sermons</button>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary pb-md whitespace-nowrap transition-colors">Templates</button>
+</div>
+<button class="flex items-center gap-sm px-md py-base bg-surface-container-high rounded-xl hover:bg-surface-container-highest transition-all text-on-surface-variant">
+<span class="material-symbols-outlined text-md">tune</span>
+<span class="font-label-md text-label-md">Advanced Filters</span>
+</button>
+</div>
+<!-- Filter Pills -->
+<div class="flex flex-wrap gap-sm">
+<span class="px-md py-base bg-surface-container-low border border-outline-variant/30 rounded-full text-label-sm font-label-sm text-on-surface-variant flex items-center gap-sm">
+                        Theology <span class="material-symbols-outlined text-[16px] cursor-pointer">close</span>
+</span>
+<span class="px-md py-base bg-surface-container-low border border-outline-variant/30 rounded-full text-label-sm font-label-sm text-on-surface-variant flex items-center gap-sm">
+                        Leadership <span class="material-symbols-outlined text-[16px] cursor-pointer">close</span>
+</span>
+<button class="text-primary font-label-sm text-label-sm hover:underline ml-xs">Clear all</button>
+</div>
+</section>
+<!-- Grid Layouts -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-2xl">
+<!-- Main Library Content -->
+<div class="xl:col-span-9 flex flex-col gap-2xl">
+<!-- Row: Trending Manuals -->
+<div class="flex flex-col gap-lg">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Trending Manuals</h3>
+<button class="text-primary font-label-md text-label-md flex items-center gap-xs group">
+                                View All
+                                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-lg">
+<!-- Card 1 -->
+<div class="group bg-surface-container-lowest border border-outline-variant/30 rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+<div class="relative h-48">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A premium digital artwork depicting a geometric representation of community growth, subtle deep blue gradients, minimalist and clean." style="background-image: url(&#39;https://lh3.googleusercontent.com/aida-public/AB6AXuB_g89b5kwVPY5ZNx3BksILX2nrRoiHUka04zKQhuMzZ2aB-HTThmwaML9texFWkCUXQdY9UZ0DXmKFk1x554Kfd4kZNPHSt-q9B7AsLhAH_I2F2max2ONMnLA3fvQWkERIprVSFxfeMva6t87gDpip06I8dFN9Aa_3k_4wGp5uAthUlKgyewTZXJpk6JH9OivS1GWAhs8109yZGDv_exDWZqN1winM5lmUEH5q6VhTeUF9NIVov0yq&#39;)"></div>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-sm py-xs rounded-lg flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">picture_as_pdf</span>
+<span class="font-label-sm text-label-sm font-bold">PDF</span>
+</div>
+</div>
+<div class="p-lg flex flex-col gap-md">
+<h4 class="font-label-md text-headline-md font-bold leading-snug group-hover:text-primary transition-colors">Small Group Multiplication</h4>
+<div class="flex items-center gap-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px]">menu_book</span> 42 Pages</span>
+<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px]">download</span> 1.2k Downloads</span>
+</div>
+<div class="flex items-center gap-sm mt-sm">
+<button class="flex-1 bg-surface-container-high text-on-surface px-md py-base rounded-xl font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all active:scale-95">Download</button>
+<button class="p-base bg-surface-container-low text-on-surface-variant rounded-xl hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-lowest border border-outline-variant/30 rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+<div class="relative h-48">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Abstract visualization of financial stewardship, light blue palette, clean lines, professional financial services aesthetic." style="background-image: url(&#39;https://lh3.googleusercontent.com/aida-public/AB6AXuD2Kx-dnD7YLyhRzADVkb8pBGCmDuThvLZzFJ3g_XHCYfb_t6GuNIRLHUJ0bBNEfJg9bA9wb8uAB6HCZqyahHPz85_i1MJR0XBe-9nkPJ-RZGsbsq6dGih8DCYU6atrdbXtc7oTz8-rOmGgKJ1v2sFr-aWcs_4Bc8qm92Nv4cCk5gv-i_b2AWpl8n1-wsKcWXB0MsQQZ6gXzFR-h8VtIQ3r_w69oeKrjH6gEFlVZWf74Zi0mvoONJvP&#39;)"></div>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-sm py-xs rounded-lg flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">table_chart</span>
+<span class="font-label-sm text-label-sm font-bold">XLSX</span>
+</div>
+</div>
+<div class="p-lg flex flex-col gap-md">
+<h4 class="font-label-md text-headline-md font-bold leading-snug group-hover:text-primary transition-colors">2024 Budget Template</h4>
+<div class="flex items-center gap-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px]">category</span> Stewardship</span>
+<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px]">download</span> 840 Downloads</span>
+</div>
+<div class="flex items-center gap-sm mt-sm">
+<button class="flex-1 bg-surface-container-high text-on-surface px-md py-base rounded-xl font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all active:scale-95">Get Template</button>
+<button class="p-base bg-surface-container-low text-on-surface-variant rounded-xl hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-lowest border border-outline-variant/30 rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+<div class="relative h-48">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Stylized graphic representing spiritual growth and depth, calm navy blue and soft white theme, minimalist digital design." style="background-image: url(&#39;https://lh3.googleusercontent.com/aida-public/AB6AXuCa1NmfaYojJ23VmwBqcNVmDhB_rmz6q-fhB4vKlfFEX-nRwQdAPvH-xxNMkz-5N4ZSc6AIhzoF3rDuOpyrL8Bv7wiLf6_gd9uTP4dE_NGCoLH31cqUGEgCLZjs6tIxKy8s_SKKXFJWxFPfRdfjohv9ScqOXp3HrrKuBlojzZK9MnscrmNwF8RRODA9Pj8g0ZT-4UY8ONXBJA7G6NiCE6K0pCU-OzyaR3g0J8fDT3p2_jiUSNctiRgI&#39;)"></div>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-sm py-xs rounded-lg flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">picture_as_pdf</span>
+<span class="font-label-sm text-label-sm font-bold">PDF</span>
+</div>
+</div>
+<div class="p-lg flex flex-col gap-md">
+<h4 class="font-label-md text-headline-md font-bold leading-snug group-hover:text-primary transition-colors">Theological Core: Vol 1</h4>
+<div class="flex items-center gap-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px]">menu_book</span> 128 Pages</span>
+<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[16px]">download</span> 2.5k Downloads</span>
+</div>
+<div class="flex items-center gap-sm mt-sm">
+<button class="flex-1 bg-surface-container-high text-on-surface px-md py-base rounded-xl font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all active:scale-95">Download</button>
+<button class="p-base bg-surface-container-low text-on-surface-variant rounded-xl hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Row: Must-Watch Teachings -->
+<div class="flex flex-col gap-lg">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Must-Watch Teachings</h3>
+<button class="text-primary font-label-md text-label-md flex items-center gap-xs group">
+                                See Full Series
+                                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<!-- Video Card 1 -->
+<div class="group relative aspect-video rounded-[24px] overflow-hidden border border-outline-variant/30">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" data-alt="A high-quality frame from a theological lecture, showing a speaker in a modern studio environment with professional lighting, a shallow depth of field, and a clean minimalist set." style="background-image: url(&#39;https://lh3.googleusercontent.com/aida-public/AB6AXuDkvjN3gK5rwS2w7IXfGzagpAdcRC6rdO_3odCuIicRHonKV6RDlQ-ImJsoP4D5vaI_91hwLnE0FHplA7bV9x49u1yd9pL-7tH6gwZls0iY5PXzLb4hpINx8JTTfwfhm8UQSQSqmDNtIldLzGmGwbepiCe2CK5koajbQf0ZTVhxxz-Rud3kQE9xAQUsbH1IRRVsDswgWaBGHxd1F5GakDltFFxmr_qQK42LIFVb2nbmOd8CtUhHAUio&#39;)"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<button class="w-16 h-16 bg-primary/90 text-on-primary rounded-full flex items-center justify-center scale-90 group-hover:scale-100 transition-transform shadow-2xl">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: &#39;FILL&#39; 1;">play_arrow</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-0 p-lg w-full">
+<p class="font-label-sm text-label-sm text-primary-fixed-dim uppercase tracking-widest mb-xs">Leadership Series</p>
+<h4 class="font-headline-md text-headline-md text-white font-bold">Modern Ministry Dynamics</h4>
+<div class="flex items-center gap-md mt-sm text-white/70 font-label-sm text-label-sm">
+<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[18px]">timer</span> 54:20</span>
+<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[18px]">visibility</span> 14k views</span>
+</div>
+</div>
+</div>
+<!-- Video Card 2 -->
+<div class="group relative aspect-video rounded-[24px] overflow-hidden border border-outline-variant/30">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" data-alt="Cinematic shot of a collaborative ministry meeting in a high-tech conference room, focusing on human interaction and shared vision, soft professional lighting." style="background-image: url(&#39;https://lh3.googleusercontent.com/aida-public/AB6AXuC2BBbZnHTp3UYSG3oQtcVgqjusv342TF1gSndiL6zIEIgMZJEL7FcXZK4DTUu2mchzGaOXhW48-HTzzN_p3a3xWL5REAbx44V1xItIqp7DluC1X2iYPjBFXO_nBuhAUAghsD2Z31rHrkjHRMESAwjdnZz_RYIVVz5hZ5hb1q_RGJeFyUKGNPeJBUW-LxJCWlLymJfGiZs5bzTXN7dJqLkiBc4CQJUCi-IOdEfhQVLfh0sDX-7T24bq&#39;)"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<button class="w-16 h-16 bg-primary/90 text-on-primary rounded-full flex items-center justify-center scale-90 group-hover:scale-100 transition-transform shadow-2xl">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: &#39;FILL&#39; 1;">play_arrow</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-0 p-lg w-full">
+<p class="font-label-sm text-label-sm text-primary-fixed-dim uppercase tracking-widest mb-xs">Culture &amp; Vision</p>
+<h4 class="font-headline-md text-headline-md text-white font-bold">Defining Aura's Digital Future</h4>
+<div class="flex items-center gap-md mt-sm text-white/70 font-label-sm text-label-sm">
+<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[18px]">timer</span> 32:15</span>
+<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[18px]">visibility</span> 8k views</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Sidebar: My Saved Resources -->
+<aside class="xl:col-span-3 flex flex-col gap-lg">
+<div class="sticky top-[100px]">
+<div class="bg-surface-container-low rounded-3xl p-lg border border-outline-variant/30 flex flex-col gap-lg">
+<div class="flex items-center justify-between">
+<h3 class="font-label-md text-headline-md font-bold">Saved Resources</h3>
+<span class="bg-primary-container text-on-primary-container px-base py-xs rounded-lg font-label-sm text-label-sm">12</span>
+</div>
+<div class="flex flex-col gap-md">
+<!-- Saved Item 1 -->
+<div class="group flex gap-md items-center p-md hover:bg-white rounded-2xl border border-transparent hover:border-outline-variant/20 transition-all cursor-pointer">
+<div class="w-12 h-16 bg-surface-container-highest rounded-lg flex items-center justify-center text-primary overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Minimalist book spine illustration for spiritual disciplines, elegant and calm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwFonOl1iyuPcoYkf2AO1ofPqBMqeY8IE-ckxIMBBPZ28o2Z9S2KYEFN3g1_8RZcj_AN6wRA8vmDNA9ypaj9g7NckvjbbhyAnVOQ9iRNl1dgjRMrmsjrkRVHQBiVK1hfnDZasehdU3SVcJC86wcrzmB_WCdTgmUhVJR09C4xWZqUegYqV0StDGsM_B8yoOaDHPU-0CMlpn19SKv2IynlPx83M-NKHEdEAY9czwSIm-HfJ5LzWSl4DO"/>
+</div>
+<div class="flex-1 min-w-0">
+<h5 class="font-label-md text-label-md text-on-surface truncate group-hover:text-primary transition-colors">Spiritual Disciplines</h5>
+<p class="font-label-sm text-label-sm text-on-surface-variant">PDF • 18 MB</p>
+</div>
+<button class="text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<!-- Saved Item 2 -->
+<div class="group flex gap-md items-center p-md hover:bg-white rounded-2xl border border-transparent hover:border-outline-variant/20 transition-all cursor-pointer">
+<div class="w-12 h-16 bg-surface-container-highest rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">play_circle</span>
+</div>
+<div class="flex-1 min-w-0">
+<h5 class="font-label-md text-label-md text-on-surface truncate group-hover:text-primary transition-colors">Conflict Resolution 101</h5>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Video • 42 Min</p>
+</div>
+<button class="text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<!-- Saved Item 3 -->
+<div class="group flex gap-md items-center p-md hover:bg-white rounded-2xl border border-transparent hover:border-outline-variant/20 transition-all cursor-pointer">
+<div class="w-12 h-16 bg-surface-container-highest rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">headphones</span>
+</div>
+<div class="flex-1 min-w-0">
+<h5 class="font-label-md text-label-md text-on-surface truncate group-hover:text-primary transition-colors">Worship Leader's Guide</h5>
+<p class="font-label-sm text-label-sm text-on-surface-variant">MP3 • 12 MB</p>
+</div>
+<button class="text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+<button class="w-full py-md border-2 border-dashed border-outline-variant/40 rounded-2xl text-on-surface-variant font-label-md text-label-md hover:bg-white hover:border-primary/40 transition-all">
+                                + Create New Collection
+                            </button>
+<div class="mt-md p-md bg-primary-container/20 rounded-2xl border border-primary/10">
+<div class="flex items-center gap-sm mb-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">cloud_done</span>
+<p class="font-label-md text-label-md text-primary font-bold">Sync Enabled</p>
+</div>
+<p class="font-label-sm text-label-sm text-on-secondary-container">Your saved library is synced across all Aura devices.</p>
+</div>
+</div>
+</div>
+</aside>
+</div>
+<!-- Row: New Downloads (Wide Row Layout) -->
+<section class="flex flex-col gap-lg mb-3xl">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">New Downloads</h3>
+</div>
+<div class="flex flex-col gap-base">
+<!-- List Item 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-md flex items-center gap-lg hover:shadow-sm transition-all group">
+<div class="w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div class="flex-1">
+<h5 class="font-label-md text-label-md font-bold">Aura Branding Guidelines v2.1</h5>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Uploaded 2 hours ago • Branding • 2.4 MB</p>
+</div>
+<div class="flex items-center gap-xl">
+<div class="hidden md:flex items-center gap-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px]">person</span> Shared with Academy
+                            </div>
+<button class="text-primary hover:bg-primary-container/30 p-base rounded-lg transition-colors">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-md flex items-center gap-lg hover:shadow-sm transition-all group">
+<div class="w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">mic</span>
+</div>
+<div class="flex-1">
+<h5 class="font-label-md text-label-md font-bold">Executive Council Meeting Audio</h5>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Uploaded 5 hours ago • Admin • 45 MB</p>
+</div>
+<div class="flex items-center gap-xl">
+<div class="hidden md:flex items-center gap-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px]">lock</span> Restricted Access
+                            </div>
+<button class="text-primary hover:bg-primary-container/30 p-base rounded-lg transition-colors">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+<!-- List Item 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-md flex items-center gap-lg hover:shadow-sm transition-all group">
+<div class="w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">contract</span>
+</div>
+<div class="flex-1">
+<h5 class="font-label-md text-label-md font-bold">Ministry Partnership Agreement</h5>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Uploaded Yesterday • Legal • 1.1 MB</p>
+</div>
+<div class="flex items-center gap-xl">
+<div class="hidden md:flex items-center gap-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px]">verified</span> Officially Approved
+                            </div>
+<button class="text-primary hover:bg-primary-container/30 p-base rounded-lg transition-colors">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- FAB for quick upload (only on main library screens) -->
+<button class="fixed bottom-xl right-xl w-14 h-14 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center active:scale-95 transition-all group hover:w-48 z-50">
+<span class="material-symbols-outlined">upload</span>
+<span class="font-label-md text-label-md opacity-0 group-hover:opacity-100 max-w-0 group-hover:max-w-xs transition-all overflow-hidden whitespace-nowrap ml-0 group-hover:ml-sm">Upload New</span>
+</button>
+<script>
+        // Simple interactions for demo
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                // Micro-interaction logic would go here
+            });
+        });
+        
+        // Sticky Header Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

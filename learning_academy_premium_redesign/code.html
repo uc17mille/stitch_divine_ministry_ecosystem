@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aura Academy | Learning Reimagined</title>
+<script type='text/javascript' nonce='+UU01wCRxNq/YI2NWEYgtg==' src='https://contribution.usercontent.google.com/_mXqgm55CtRYK6a_8pO566baP1fTWW_2EYwVX2ygJmEqIhETlB7W0ICaFN5nbzLjM2F5hkcdr2iGTjdQv_JK132YyXbD7951AsQSBewKRd_W_InKMb9XteXzOdONcXXXc2j6Kd0dYDCbRsMFk8zsJ9oKTpf61KhCev97tSrwP9_tKLrMSLFdJ2DxtFFsMn_dtMfzJwNnxAZHvgEF-XvSUB5PijZ_W1wuAk4bq5YZXGqB6ivcCcUTmmL0uetfQEj_GyASawp0-ZF9ZSYnJfH2XMd0sExnxuxxKg8riYf8gMVo9G6eJrE9pnr-VczN6i9f9ImuufM-TnFjbJYhoUZ2FgzHGMwBh0TAqDo0envqYscJEIRwAj28zHvBtgiMztOYQfnw8U94UTUYy1mp_NOcGr2sU4zEn_3_xVoIucJL-sa6TDGNVOSVWK3nhm94vaXGNsICcTITnZOVCz4QQoWgkhFsvF1WW8stqCg6PBBAjHbgZg2fENR9yduS-W51lxKlPFQ-toH3sw6irFfVk9YX1v7MU2NomASnyNYEKaQGATOvy4lBa8uKzokdMvb52PPRxzBQUiE9yVpMd6YpbwUgM4KQjVBhPkgUegf_UisZHG2W-0NkyK7rAEh2Y0ZSo37KFlKxdvPqfsXNobkzgiNvzjjToxJXUC0sqtJcYWMxAQ3D-A3d_iU8IuUOm7A7-09H3PoQxenxOKse6GsKiY6T6B5q7bWlyF2VGyflYPR4ozAwnNOXgfgXAEf6bg8PmAqf_jvzSn3ayuC0CEM6eAj2cctjMCvPrfGdkCanD4jViYvvSmt-CM98'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Geist+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Geist', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-high": "#e2e7ff",
+                      "surface-container-highest": "#dae2fd",
+                      "tertiary-container": "#872d00",
+                      "on-tertiary-fixed": "#380d00",
+                      "on-tertiary-container": "#ffa583",
+                      "primary-container": "#1e40af",
+                      "surface-tint": "#3755c3",
+                      "tertiary-fixed": "#ffdbce",
+                      "secondary-container": "#d0e1fb",
+                      "error-container": "#ffdad6",
+                      "on-error-container": "#93000a",
+                      "surface-bright": "#faf8ff",
+                      "surface-dim": "#d2d9f4",
+                      "on-secondary-fixed": "#0b1c30",
+                      "on-primary-fixed-variant": "#173bab",
+                      "secondary-fixed": "#d3e4fe",
+                      "outline-variant": "#c4c5d5",
+                      "on-primary": "#ffffff",
+                      "on-secondary-fixed-variant": "#38485d",
+                      "on-background": "#131b2e",
+                      "secondary-fixed-dim": "#b7c8e1",
+                      "on-surface-variant": "#444653",
+                      "background": "#faf8ff",
+                      "tertiary": "#611e00",
+                      "tertiary-fixed-dim": "#ffb59a",
+                      "error": "#ba1a1a",
+                      "primary-fixed": "#dde1ff",
+                      "inverse-primary": "#b8c4ff",
+                      "inverse-surface": "#283044",
+                      "primary-fixed-dim": "#b8c4ff",
+                      "on-secondary-container": "#54647a",
+                      "secondary": "#505f76",
+                      "inverse-on-surface": "#eef0ff",
+                      "surface": "#faf8ff",
+                      "on-surface": "#131b2e",
+                      "primary": "#00288e",
+                      "surface-container": "#eaedff",
+                      "surface-container-low": "#f2f3ff",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "on-primary-container": "#a8b8ff",
+                      "on-primary-fixed": "#001453",
+                      "on-tertiary-fixed-variant": "#802a00",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error": "#ffffff",
+                      "surface-variant": "#dae2fd",
+                      "outline": "#757684"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "3xl": "64px",
+                      "sm": "8px",
+                      "xs": "4px",
+                      "base": "8px",
+                      "lg": "24px",
+                      "margin": "32px",
+                      "md": "16px",
+                      "2xl": "48px",
+                      "xl": "32px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Geist"],
+                      "body-md": ["Geist"],
+                      "label-md": ["Geist"],
+                      "display": ["Geist"],
+                      "label-sm": ["Geist"],
+                      "headline-md": ["Geist"],
+                      "headline-lg-mobile": ["Geist"],
+                      "body-sm": ["Geist"],
+                      "body-lg": ["Geist"],
+                      "mono": ["Geist Mono"]
+              },
+              "fontSize": {
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                      "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                      "body-sm": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                      "mono": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- Navigation Shell (SideNavBar) -->
+<aside class="hidden md:flex flex-col h-screen p-md fixed left-0 top-0 z-40 bg-surface border-r border-outline-variant/30 w-[280px]">
+<div class="mb-xl px-sm">
+<h1 class="font-headline-md text-headline-md font-black text-primary">Aura</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Digital Ecosystem</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-md p-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest/50 transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-md p-md bg-secondary-container text-on-secondary-container font-semibold rounded-xl translate-x-1 transition-transform group" href="#">
+<span class="material-symbols-outlined text-[20px]">school</span>
+<span class="font-label-md text-label-md">Academy</span>
+</a>
+<a class="flex items-center gap-md p-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest/50 transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px]">diversity_3</span>
+<span class="font-label-md text-label-md">Mentorship</span>
+</a>
+<a class="flex items-center gap-md p-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest/50 transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+<span class="font-label-md text-label-md">Community</span>
+</a>
+<a class="flex items-center gap-md p-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest/50 transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px]">folded_hands</span>
+<span class="font-label-md text-label-md">Prayer</span>
+</a>
+<a class="flex items-center gap-md p-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest/50 transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+<span class="font-label-md text-label-md">Events</span>
+</a>
+<a class="flex items-center gap-md p-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest/50 transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px]">folder_shared</span>
+<span class="font-label-md text-label-md">Resources</span>
+</a>
+<a class="flex items-center gap-md p-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest/50 transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px]">admin_panel_settings</span>
+<span class="font-label-md text-label-md">Admin</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-outline-variant/30 pt-md">
+<a class="flex items-center gap-md p-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest/50 transition-all rounded-xl" href="#">
+<span class="material-symbols-outlined text-[24px]">account_circle</span>
+<span class="font-label-md text-label-md">Profile</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:ml-[280px] min-h-screen">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full px-lg py-sm z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 sticky top-0 shadow-sm h-16">
+<div class="flex items-center gap-xl w-full max-w-2xl">
+<div class="relative w-full max-w-md hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full bg-surface-container-low border border-outline-variant/50 rounded-full pl-10 pr-4 py-2 text-body-sm font-body-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" placeholder="Search courses, mentors, or topics..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<button class="bg-primary text-on-primary font-label-md text-label-md px-lg py-2.5 rounded-full hover:shadow-lg active:scale-[0.98] transition-all hidden lg:block">
+                    New Prayer Request
+                </button>
+<div class="flex gap-xs">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low transition-colors rounded-full relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low transition-colors rounded-full">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Content Area -->
+<div class="px-lg lg:px-2xl py-xl max-w-[1600px] mx-auto">
+<!-- Hero / Featured Bento -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-lg mb-3xl">
+<div class="lg:col-span-8 relative h-[400px] rounded-3xl overflow-hidden group border border-outline-variant/30">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A cinematic, wide-angle shot of a serene high-tech library environment with floating holographic scriptures and golden light beams filtering through vertical minimalist architecture. The scene captures a sense of divine wisdom meeting modern technology, with soft blue and deep white tones defining a premium, academic atmosphere." style="background-image: url(&#39;https://lh3.googleusercontent.com/aida-public/AB6AXuAl6BsX8Y-a4lL8La907b5bxZX0JWkFGSPBBXzdb4TCTP3nJq3Bwy8iFrAwJ21VABDc0ozbk_mp7B3tGlBOwLDw--8IPWZx-w4l1N0cJlKZg5el6-rA66Y6yua8KepJpLmxgIj0g6jLUpFw_NrMMEjUScOp04KJy_SriSjJbKO--sGr0l6Ftd_6LY0ZIsbi2uXjpz5rlgd8YatWSdTFKw9F34ajKU2kVosTTon7W0xzQh1hjg0pUViD&#39;)"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-xl">
+<span class="bg-primary/20 backdrop-blur-md text-white border border-white/20 px-md py-1 rounded-full text-label-sm font-label-sm mb-md inline-block">Featured Masterclass</span>
+<h2 class="text-white font-headline-lg text-headline-lg mb-sm">The Architecture of Spiritual Discipline</h2>
+<p class="text-white/80 font-body-md text-body-md max-w-xl mb-lg">Unlock advanced frameworks for consistency, prayer life, and digital ministry leadership with Dr. Aris Thorne.</p>
+<button class="bg-white text-black font-label-md text-label-md px-xl py-3 rounded-full hover:bg-primary-container hover:text-white transition-all flex items-center gap-sm">
+                            Continue Learning <span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="lg:col-span-4 grid grid-rows-2 gap-lg">
+<div class="bg-primary-container rounded-3xl p-xl flex flex-col justify-between border border-primary/20">
+<div>
+<p class="text-on-primary-container/80 font-label-sm text-label-sm uppercase tracking-widest mb-xs">Today's Goal</p>
+<h3 class="text-white font-headline-md text-headline-md">45 Minutes</h3>
+</div>
+<div class="space-y-md">
+<div class="w-full bg-white/10 rounded-full h-2">
+<div class="bg-white h-full rounded-full w-[65%]"></div>
+</div>
+<p class="text-white/90 font-label-md text-label-md">29m left to hit your streak</p>
+</div>
+</div>
+<div class="bg-surface-container rounded-3xl p-xl border border-outline-variant/30 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<h3 class="text-on-surface font-headline-md text-headline-md">Academy Live</h3>
+<span class="bg-error text-white px-sm py-0.5 rounded text-[10px] font-bold">LIVE</span>
+</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm">Deep Dive: Biblical Exegesis in a Post-Digital Age</p>
+<button class="text-primary font-label-md text-label-md flex items-center gap-xs hover:gap-sm transition-all">
+                            Join Now <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Course Rows (Netflix Style) -->
+<div class="space-y-3xl">
+<!-- Section 1: In Progress -->
+<section>
+<div class="flex justify-between items-end mb-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface">Continue Watching</h3>
+<a class="text-primary font-label-md text-label-md hover:underline" href="#">View All</a>
+</div>
+<div class="flex gap-lg overflow-x-auto hide-scrollbar pb-md -mx-md px-md">
+<!-- Course Card 1 -->
+<div class="min-w-[320px] max-w-[320px] group cursor-pointer">
+<div class="relative aspect-video rounded-xl overflow-hidden border border-outline-variant/30 mb-md">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A clean top-down view of a designer&#39;s desk with a Bible, a modern laptop showing abstract code, and a cup of black coffee on a white surface. The lighting is bright and airy with soft shadows, creating a high-performance productivity aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-0WdVnHnCRIHBqO9hcNYKaF-jjEPjdJ4R4veX4tkj8j0KlKGZUyIrPp6md7KxT1HBhQQ5RxaE2zFsD-6mSQmsfXep_Vv03nQH2imLCEVCKZFtNpq9-jh2MaMDyuui-VP3A5Xnm_bqPCpdy8k-fqMgbVBlRvd3Xz7jQ21JIYoMj5QgXBwrhU-iwOQ91mwZe6Xtj5h0Hq-KvYMqRzz4S5LOvzzsQlms-Gg7iOxHDF3iPn1QMwa8VeFz"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-[48px]" style="font-variation-settings: &#39;FILL&#39; 1;">play_circle</span>
+</div>
+<div class="absolute bottom-0 left-0 w-full bg-white/20 backdrop-blur-sm h-1">
+<div class="bg-primary h-full w-[45%]"></div>
+</div>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">Ethics of Artificial Intelligence</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Module 4: The Imago Dei in Data</p>
+</div>
+<!-- Course Card 2 -->
+<div class="min-w-[320px] max-w-[320px] group cursor-pointer">
+<div class="relative aspect-video rounded-xl overflow-hidden border border-outline-variant/30 mb-md">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="An abstract visual representation of complex networks and light pathways intersecting in a dark blue digital space. Glowing nodes represent community connections, stylized with a clean architectural precision and a calm, professional blue color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9VYXBvvX7UDjF7v0z-KEa8fgodZmsLmSkXCg9H7CyuUiA3T0qpmTlclR1l6Zdlfznuzl9cwh9TPnSgFTOYqaqluff80zBVBqWnsUsq5jk8pfVXFHlG7a6khi2r2cMJglWGd_K_zvarXHICJ5MCwH4LotHQm0IBBBZ-qKED95OzKcvi34U-7H8V--RjJh1KuVlrD63taGch2Vo4W__e4IIgwGafzQQG2klvy2v2h-4mHGL4HYeevN3"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-[48px]" style="font-variation-settings: &#39;FILL&#39; 1;">play_circle</span>
+</div>
+<div class="absolute bottom-0 left-0 w-full bg-white/20 backdrop-blur-sm h-1">
+<div class="bg-primary h-full w-[82%]"></div>
+</div>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">Digital Community Building</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Module 9: Scaling Authentic Connection</p>
+</div>
+<!-- Course Card 3 -->
+<div class="min-w-[320px] max-w-[320px] group cursor-pointer">
+<div class="relative aspect-video rounded-xl overflow-hidden border border-outline-variant/30 mb-md">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A minimalist architectural photograph of a modern chapel with soaring white concrete walls and a single thin slit of light creating a dramatic shadow. The atmosphere is quiet, contemplative, and extremely high-end corporate minimalist style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXK8U_ysJ0KriMmVpFtLGukglmuq6cDpr7Ndh_LrhmaOSHKahMQzBWMX9QmEmTJuNd6TdQrn-rVYnCZeDAEOKK-0O6XwONc6CNtzU-XGjkQPtIM-DLtEqTvsJiaw0B6Dq__ePlEMqBhrrT259crfrjoz1qBifGvb6rrujwf_dEEXzsgfT15QjPONcuwTotzYUpBq33mMdd350IjPnWIQrVa-WbHs9M7Z8HHgULl1H-1oxUmwdyvkkJ"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-[48px]" style="font-variation-settings: &#39;FILL&#39; 1;">play_circle</span>
+</div>
+<div class="absolute bottom-0 left-0 w-full bg-white/20 backdrop-blur-sm h-1">
+<div class="bg-primary h-full w-[12%]"></div>
+</div>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">Modern Hermeneutics</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Module 1: Introduction to Narrative</p>
+</div>
+</div>
+</section>
+<!-- Section 2: Recommended -->
+<section>
+<div class="flex items-center gap-md mb-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface">Recommended for You</h3>
+<div class="h-px flex-1 bg-outline-variant/30"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg">
+<!-- Vertical Card 1 -->
+<div class="group bg-surface border border-outline-variant/30 rounded-2xl p-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-md relative">
+<img class="w-full h-full object-cover" data-alt="A high-contrast black and white portrait of a thoughtful leader against a deep blue textured background. The image style is editorial, similar to a high-end business magazine, with dramatic lighting that emphasizes texture and character." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvbshfenxRNe2Ud7yLxLDjFB7MfzbDEvGoC86eK9SDkTg6uiZupMY_vlrUtcD-ixFQtfc7U421Fq_fbwvLzyWGFolc_LvmoOvzmBKFJ7agF-jVm6qaVj9ADIrFVr7dXE3rV8dGojUbeuByysdp6_8YATsNDqm6bTxGGGtIdSd_fvxShJKMZNC5qpSkB0MM9Q3Dcfr-kA9cqA1ESPXdEu5oS5BV5bvPoru9kMSo4RGiGXvXnTy9DzG4"/>
+<div class="absolute top-md right-md">
+<button class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-black transition-colors">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</button>
+</div>
+</div>
+<div class="px-xs pb-xs">
+<div class="flex justify-between items-center mb-xs">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary">Theology</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px]">timer</span> 12h 40m
+                                    </span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface mb-xs">Systematic Leadership</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">A comprehensive guide to managing ministry ecosystems with grace and data.</p>
+</div>
+</div>
+<!-- Vertical Card 2 -->
+<div class="group bg-surface border border-outline-variant/30 rounded-2xl p-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-md relative">
+<img class="w-full h-full object-cover" data-alt="Close-up of high-quality metallic sound mixing equipment with glowing amber lights and brushed steel textures. The focus is shallow, blurring into a professional recording studio environment with dark, warm tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX73KGXEKFopI4a1x-gCR5J8xdLmHMvUgWEYRljXitItJurJ70lGquS4XvZwnNOwhx5F3bLFU5vt8HiXeS8L2HV8KC4roq1FZQIdHRXJ39v3p-lbyVklAWzqT1xn50gqSQOETPQbTvEiQFeIb6_cQPqh0PNnz0pdd-Lt1_zcF_CxyR0ABqHlcAjQTr_KEnaXleq9lhf2rMSh77A4aMdtRbsLkazfddDJ_K8OlJHShwAAux6FtsgyNT"/>
+<div class="absolute top-md right-md">
+<button class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-black transition-colors">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</button>
+</div>
+</div>
+<div class="px-xs pb-xs">
+<div class="flex justify-between items-center mb-xs">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary">Media</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px]">timer</span> 8h 15m
+                                    </span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface mb-xs">Production Excellence</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Crafting high-fidelity worship experiences through technical precision.</p>
+</div>
+</div>
+<!-- Vertical Card 3 -->
+<div class="group bg-surface border border-outline-variant/30 rounded-2xl p-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-md relative">
+<img class="w-full h-full object-cover" data-alt="Macro photography of a fountain pen nib touching premium textured paper, with ink subtly spreading. The lighting is warm and directional, evoking a sense of deep study and creative writing. Minimalist and high-craft aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4tSSBIe1QySPMAVyWfXihZTO1PywrNkik8U2HsNOhNXykqhAjZQOFSTnzKkmf2Xd1YgwCAk6Emb-Rex0ShknR-2gDeiEw1VN75oNLO_4-BX5Xurqckwp0CbT3_GvpmUmmnUq9Xh4YzvZJeaMJJgLlIKhwgFtX6aJggL1LnTXB3JP3EVBzyFxnQhsm09h4M6nbGhy-rsEo9AXFL7Qys-YilYFJAGt3EupTcM6XzZK-E2wbYtMN3tBc"/>
+<div class="absolute top-md right-md">
+<button class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-black transition-colors">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</button>
+</div>
+</div>
+<div class="px-xs pb-xs">
+<div class="flex justify-between items-center mb-xs">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary">Communications</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px]">timer</span> 5h 50m
+                                    </span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface mb-xs">The Art of Storytelling</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Bridging ancient truths with contemporary narratives through compelling copy.</p>
+</div>
+</div>
+<!-- Vertical Card 4 -->
+<div class="group bg-surface border border-outline-variant/30 rounded-2xl p-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-md relative">
+<img class="w-full h-full object-cover" data-alt="A modern, high-tech glass conference room overlooking a digital city at twilight. A single illuminated tablet sits on a sleek obsidian table. The overall mood is futuristic, professional, and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwd3e61_MDF_Si2uEssf3NUihvVnNxEQTT8CQsDt5LA2_-TU3g1VI61SNtxQBfObTE7VWwKQ-2P4HrjoWl3rEMtNJp0zbxNiMjDjia5H1kyObvbaSXs2JqXAfIwxBXNgo1_LV4ck6Bc_Acx0M6ArfT2DlJMygo8eLHEFjCPNhm2Gqt4Tt8FLwyPWNSA0vh7DG_4230XnniF8N3DXyBI8f1T0IwhEaA7X0U6AsQtvKivUShUQ_91md7"/>
+<div class="absolute top-md right-md">
+<button class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-black transition-colors">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</button>
+</div>
+</div>
+<div class="px-xs pb-xs">
+<div class="flex justify-between items-center mb-xs">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary">Governance</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px]">timer</span> 15h 20m
+                                    </span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface mb-xs">Foundations of Stewardship</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Fiscal responsibility and transparency in modern non-profit environments.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Popular Categories -->
+<section>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-lg">Browse by Domain</h3>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-md">
+<button class="flex flex-col items-center justify-center p-lg bg-surface border border-outline-variant/30 rounded-2xl hover:bg-surface-container-low hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-[32px] text-primary mb-md group-hover:scale-110 transition-transform">auto_stories</span>
+<span class="font-label-md text-label-md">Theology</span>
+</button>
+<button class="flex flex-col items-center justify-center p-lg bg-surface border border-outline-variant/30 rounded-2xl hover:bg-surface-container-low hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-[32px] text-primary mb-md group-hover:scale-110 transition-transform">insights</span>
+<span class="font-label-md text-label-md">Leadership</span>
+</button>
+<button class="flex flex-col items-center justify-center p-lg bg-surface border border-outline-variant/30 rounded-2xl hover:bg-surface-container-low hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-[32px] text-primary mb-md group-hover:scale-110 transition-transform">precision_manufacturing</span>
+<span class="font-label-md text-label-md">Tech &amp; AI</span>
+</button>
+<button class="flex flex-col items-center justify-center p-lg bg-surface border border-outline-variant/30 rounded-2xl hover:bg-surface-container-low hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-[32px] text-primary mb-md group-hover:scale-110 transition-transform">palette</span>
+<span class="font-label-md text-label-md">Creative Art</span>
+</button>
+<button class="flex flex-col items-center justify-center p-lg bg-surface border border-outline-variant/30 rounded-2xl hover:bg-surface-container-low hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-[32px] text-primary mb-md group-hover:scale-110 transition-transform">psychology</span>
+<span class="font-label-md text-label-md">Counseling</span>
+</button>
+<button class="flex flex-col items-center justify-center p-lg bg-surface border border-outline-variant/30 rounded-2xl hover:bg-surface-container-low hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-[32px] text-primary mb-md group-hover:scale-110 transition-transform">history_edu</span>
+<span class="font-label-md text-label-md">Philosophy</span>
+</button>
+</div>
+</section>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full py-lg px-xl flex flex-col md:flex-row justify-between items-center gap-md border-t border-outline-variant/20 bg-surface">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Aura Ministry Ecosystem. Precision-Crafted Utility.</p>
+<div class="flex gap-lg">
+<a class="font-label-sm text-label-sm text-on-secondary-container hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="font-label-sm text-label-sm text-on-secondary-container hover:text-primary transition-colors" href="#">Terms</a>
+<a class="font-label-sm text-label-sm text-on-secondary-container hover:text-primary transition-colors" href="#">Support</a>
+<a class="font-label-sm text-label-sm text-on-secondary-container hover:text-primary transition-colors" href="#">API</a>
+</div>
+</footer>
+</main>
+<!-- Mobile Navigation Shell -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-surface/80 backdrop-blur-xl border-t border-outline-variant/30 flex justify-around py-3 px-md z-50">
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined text-[24px]">dashboard</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: &#39;FILL&#39; 1;">school</span>
+<span class="text-[10px] font-bold">Academy</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined text-[24px]">diversity_3</span>
+<span class="text-[10px] font-medium">Community</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined text-[24px]">account_circle</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interaction for course progress updates
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                // Subtle scale effect handled via Tailwind
+            });
+        });
+
+        // Search Bar focus effect
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('ring-2', 'ring-primary/10');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('ring-2', 'ring-primary/10');
+        });
+    </script>
+</body></html>

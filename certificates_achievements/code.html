@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Certificates &amp; Achievements | Aura Ecosystem</title>
+<script type='text/javascript' nonce='UOt647Umo3Av2T0tnbNjtw==' src='https://contribution.usercontent.google.com/_BZD4OgmCDEwaRFLfBdhbDEW9jSyeCPNyx2Pfw7lBF6qZqTPVVNf7Q8uS1am3Rtq_yg4lIIe3QZb3anBK7IvHm8chxfopj5ZCnNR01GyiXCe2XWvfuxkq2hyLL_inaUj0Y7jJNLOF_4dJwQhSiN9RSh7_oEBnpNTkL2lWlApkMn6mD7wcRu3fpjlW8GCq9aFGSifdeIWMtzbxLXY1wkIZ-S3yEW5PBnawyZ9R606zN2d05Ki7APnuXoCv3f-zuCkwXr3jftJro_XBcqWvkWxy_DWYANkEcw1pN1_fXOgrT9Yu-3IKOHXup1JvpXIPtLEGrXHPDNizKfXLkWEHY45aQmaoeEbrsxWrCwiC780mxHGe-HAp82aRcztwFP7wN2T1khOQ3UDnlPYTv7rvEJYNBgTwW7M_YkJTOsc_2C25X0-zvOoZPS3HKiHqE0trdUtbRXtcqEybTW0NpKNZZY3GwdVqTSry2rJmGhV2YEMW9lLCgPsBi7-DY7gohnIATu_9c0vs23naCo7EuMd4BIMcmnx46cVEn-7VOLW_f6sveKMXtsh_vQPY2zdD7v95S5cL9HQnt0ew4DH-MuNKjruylIuvwoy1u8yErxJFqOQVktufS2GEDD8st8PegGPTJfTwmOr6l67NSoDSmh230nBNF4x7nqgyxuw7tBVolARekr-muth9ElJY2ugpvqbGibw49q103874z-j-eOgkuj3Fqw8lvaJ0Fc03ndn-hNbJ-Bqgc4pEWoN0rJ6RHU7iAA_c5epMtGLeNp2kOEgYjvPqp_yYJbJbKXEqMj_soIDpcUSomf_ONvi'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Geist+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .achievement-card:hover .achievement-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        body {
+            font-family: 'Geist', sans-serif;
+            scroll-behavior: smooth;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#38485d",
+                        "on-primary-container": "#a8b8ff",
+                        "surface-container-highest": "#dae2fd",
+                        "surface-variant": "#dae2fd",
+                        "secondary-fixed": "#d3e4fe",
+                        "outline-variant": "#c4c5d5",
+                        "inverse-on-surface": "#eef0ff",
+                        "primary": "#00288e",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#0b1c30",
+                        "on-tertiary-fixed-variant": "#802a00",
+                        "on-background": "#131b2e",
+                        "inverse-surface": "#283044",
+                        "secondary-container": "#d0e1fb",
+                        "surface-container-low": "#f2f3ff",
+                        "surface": "#faf8ff",
+                        "surface-bright": "#faf8ff",
+                        "primary-fixed": "#dde1ff",
+                        "on-tertiary-fixed": "#380d00",
+                        "primary-fixed-dim": "#b8c4ff",
+                        "on-error-container": "#93000a",
+                        "background": "#faf8ff",
+                        "on-surface-variant": "#444653",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#ffdbce",
+                        "on-secondary-container": "#54647a",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "on-surface": "#131b2e",
+                        "tertiary-container": "#872d00",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "inverse-primary": "#b8c4ff",
+                        "tertiary": "#611e00",
+                        "on-primary-fixed": "#001453",
+                        "secondary": "#505f76",
+                        "on-primary-fixed-variant": "#173bab",
+                        "on-tertiary-container": "#ffa583",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#ffb59a",
+                        "primary-container": "#1e40af",
+                        "surface-dim": "#d2d9f4",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e2e7ff",
+                        "surface-container": "#eaedff",
+                        "on-primary": "#ffffff",
+                        "outline": "#757684",
+                        "surface-tint": "#3755c3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin": "32px",
+                        "md": "16px",
+                        "3xl": "64px",
+                        "xl": "32px",
+                        "base": "8px",
+                        "2xl": "48px",
+                        "sm": "8px",
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "lg": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "label-md": ["Geist"],
+                        "body-sm": ["Geist"],
+                        "display": ["Geist"],
+                        "body-md": ["Geist"],
+                        "label-sm": ["Geist"],
+                        "headline-lg": ["Geist"],
+                        "mono": ["Geist Mono"],
+                        "body-lg": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                        "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "mono": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm flex justify-between items-center px-lg py-md w-full">
+<div class="flex items-center gap-xl">
+<span class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed tracking-tight">Aura</span>
+<nav class="hidden md:flex gap-lg">
+<a class="text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low transition-colors duration-200 px-md py-xs rounded-lg font-label-md text-label-md" href="#">Dashboard</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low transition-colors duration-200 px-md py-xs rounded-lg font-label-md text-label-md" href="#">Academy</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary px-md py-xs font-label-md text-label-md" href="#">Achievements</a>
+</nav>
+</div>
+<div class="flex items-center gap-md">
+<button class="p-base rounded-full hover:bg-surface-container-low transition-colors active:scale-95">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+</button>
+<button class="p-base rounded-full hover:bg-surface-container-low transition-colors active:scale-95">
+<span class="material-symbols-outlined text-on-surface-variant">settings</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden border border-outline-variant/30">
+<img class="w-full h-full object-cover" data-alt="A professional studio portrait of a confident young individual with a warm smile, wearing a modern navy blazer. The lighting is soft and cinematic, with a clean minimalist background that reflects a high-end corporate aesthetic. The overall mood is approachable yet authoritative, fitting for a leadership profile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCPx4T3aWOMBPgOx9rQEueNIdgiCrGE9vCdCQhDcHpmhRdb-OVPGMPzmpkOloZrP7B3hMaGokpfG8EgU0cIGeHssPmbt0L0mcad6ksruXmiEzWr6P7TEih6rGYHjxit4EzDNUdMk4PghCcA7QpmcGfDD8elWmAQBMhSNlDfsRCwRPmKACBDN3nYW1128HGsx5XrxuBoRhMsEe8Y6q1TparJzBCFmNAEDhUK38E6tQE3Gb0_kzAZU_U"/>
+</div>
+</div>
+</header>
+<!-- SideNavBar (Desktop Only) -->
+<aside class="hidden md:flex fixed left-0 top-0 h-full w-[280px] bg-surface dark:bg-background border-r border-outline-variant/20 flex-col p-md gap-sm z-40 pt-24">
+<div class="px-md mb-lg">
+<h2 class="font-headline-md text-headline-md font-black text-primary dark:text-primary-fixed">Aura Ecosystem</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Digital Ministry</p>
+</div>
+<div class="flex flex-col gap-xs flex-1">
+<a class="flex items-center gap-md px-md py-sm text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low transition-all hover:translate-x-1 duration-300 rounded-xl" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low transition-all hover:translate-x-1 duration-300 rounded-xl" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="font-label-md text-label-md">Academy</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low transition-all hover:translate-x-1 duration-300 rounded-xl" href="#">
+<span class="material-symbols-outlined">play_circle</span>
+<span class="font-label-md text-label-md">Lessons</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-xl font-medium" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">emoji_events</span>
+<span class="font-label-md text-label-md">Achievements</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low transition-all hover:translate-x-1 duration-300 rounded-xl" href="#">
+<span class="material-symbols-outlined">diversity_3</span>
+<span class="font-label-md text-label-md">Mentorship</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-low transition-all hover:translate-x-1 duration-300 rounded-xl" href="#">
+<span class="material-symbols-outlined">forum</span>
+<span class="font-label-md text-label-md">Community</span>
+</a>
+</div>
+<div class="p-md bg-secondary-container/30 rounded-2xl mt-auto">
+<p class="font-label-sm text-label-sm text-on-secondary-container mb-xs uppercase tracking-wider">Premium Access</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md leading-tight">Unlock advanced ministry tools and global certification.</p>
+<button class="w-full bg-primary text-on-primary py-sm rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors">Upgrade to Premium</button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:ml-[280px] pt-24 px-md md:px-xl pb-xl">
+<!-- Header Section -->
+<div class="mb-xl">
+<h1 class="font-display text-display text-on-surface">Milestones &amp; Growth</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Reflecting on your spiritual and leadership journey within the Aura Ecosystem. Each achievement represents a step toward global impact.</p>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-lg items-start">
+<!-- Latest Certificate Showcase (Col Span 8) -->
+<section class="lg:col-span-8 space-y-lg">
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-3xl overflow-hidden shadow-sm">
+<div class="p-xl border-b border-outline-variant/20 flex flex-col md:flex-row md:items-center justify-between gap-md">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest bg-primary-fixed px-sm py-xs rounded">Featured Credential</span>
+<h2 class="font-headline-lg text-headline-lg mt-base">Foundations of Leadership</h2>
+</div>
+<div class="flex gap-sm">
+<button class="flex items-center gap-xs px-md py-sm border border-outline rounded-xl font-label-md text-label-md hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">download</span> PDF
+                            </button>
+<button class="flex items-center gap-xs px-md py-sm bg-primary text-on-primary rounded-xl font-label-md text-label-md hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[20px]">verified</span> Verify
+                            </button>
+</div>
+</div>
+<div class="aspect-[1.414/1] relative p-xl bg-surface-container-low flex items-center justify-center">
+<!-- Digital Certificate Preview -->
+<div class="w-full max-w-2xl bg-white aspect-[1.414/1] shadow-2xl relative overflow-hidden flex flex-col items-center justify-center p-xl border-[16px] border-primary/5">
+<div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(#00288e 1px, transparent 1px); background-size: 20px 20px;"></div>
+<span class="font-headline-md text-headline-md text-primary tracking-widest mb-md">AURA ACADEMY</span>
+<div class="w-24 h-px bg-outline-variant mb-xl"></div>
+<p class="font-label-md text-label-md text-on-surface-variant mb-sm">This is to certify that</p>
+<h3 class="font-display text-[42px] leading-tight text-on-surface mb-md">Alexander Sterling</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-center max-w-md">has successfully completed the comprehensive curriculum and spiritual evaluation for the professional mastery of</p>
+<p class="font-headline-lg text-headline-lg text-primary my-xl italic">Foundations of Leadership</p>
+<div class="flex items-center justify-between w-full mt-auto px-xl">
+<div class="text-center">
+<div class="h-px w-32 bg-outline-variant mb-sm"></div>
+<p class="font-label-sm text-label-sm">Registrar</p>
+</div>
+<div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center border-2 border-primary/20">
+<span class="material-symbols-outlined text-primary text-[40px]" style="font-variation-settings: &#39;FILL&#39; 1;">workspace_premium</span>
+</div>
+<div class="text-center">
+<div class="h-px w-32 bg-outline-variant mb-sm"></div>
+<p class="font-label-sm text-label-sm">Academy Dean</p>
+</div>
+</div>
+</div>
+</div>
+<div class="p-lg bg-surface-container flex items-center justify-between">
+<div class="flex -space-x-2">
+<div class="h-8 w-8 rounded-full border-2 border-surface-container bg-primary-fixed-dim"></div>
+<div class="h-8 w-8 rounded-full border-2 border-surface-container bg-secondary-fixed"></div>
+<div class="h-8 w-8 rounded-full border-2 border-surface-container bg-tertiary-fixed"></div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Shared by 1.2k graduates this month</p>
+<button class="font-label-md text-label-md text-primary flex items-center gap-xs hover:underline">
+                            Share to Community <span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</div>
+<!-- Path to Next Achievement -->
+<div class="bg-surface-container-highest/30 rounded-3xl p-xl border border-outline-variant/30">
+<div class="flex items-center justify-between mb-lg">
+<div>
+<h3 class="font-headline-md text-headline-md">Advanced Mentorship</h3>
+<p class="font-label-md text-label-md text-on-surface-variant">Estimated completion: 12 days</p>
+</div>
+<span class="font-display text-primary">78%</span>
+</div>
+<div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden mb-lg">
+<div class="h-full bg-primary w-[78%] transition-all duration-1000"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="bg-surface-container-lowest p-md rounded-2xl flex items-center gap-md border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: &#39;FILL&#39; 1;">check_circle</span>
+<span class="font-label-md text-label-md">Theory Module</span>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-2xl flex items-center gap-md border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: &#39;FILL&#39; 1;">check_circle</span>
+<span class="font-label-md text-label-md">Practical Session</span>
+</div>
+<div class="bg-primary/5 p-md rounded-2xl flex items-center gap-md border border-primary/20">
+<span class="material-symbols-outlined text-outline">radio_button_unchecked</span>
+<span class="font-label-md text-label-md">Final Assessment</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Sidebar Content (Col Span 4) -->
+<section class="lg:col-span-4 space-y-lg">
+<!-- Badge Gallery -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-3xl p-xl shadow-sm">
+<div class="flex items-center justify-between mb-xl">
+<h3 class="font-headline-md text-headline-md">Badge Gallery</h3>
+<a class="text-primary font-label-md text-label-md hover:underline" href="#">View All</a>
+</div>
+<div class="grid grid-cols-2 gap-md">
+<!-- Badge 1 -->
+<div class="achievement-card flex flex-col items-center text-center p-md bg-surface rounded-2xl border border-outline-variant/20 hover:border-primary/30 transition-all cursor-default">
+<div class="achievement-icon w-16 h-16 rounded-full bg-tertiary-fixed flex items-center justify-center mb-md shadow-inner transition-transform duration-300">
+<span class="material-symbols-outlined text-on-tertiary-fixed text-[32px]" style="font-variation-settings: &#39;FILL&#39; 1;">folded_hands</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface">100 Prayer Hours</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-xs">Earned Oct 2023</p>
+</div>
+<!-- Badge 2 -->
+<div class="achievement-card flex flex-col items-center text-center p-md bg-surface rounded-2xl border border-outline-variant/20 hover:border-primary/30 transition-all cursor-default">
+<div class="achievement-icon w-16 h-16 rounded-full bg-secondary-fixed flex items-center justify-center mb-md shadow-inner transition-transform duration-300">
+<span class="material-symbols-outlined text-on-secondary-fixed text-[32px]" style="font-variation-settings: &#39;FILL&#39; 1;">groups</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface">Mentor Certified</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-xs">Earned Dec 2023</p>
+</div>
+<!-- Badge 3 -->
+<div class="achievement-card flex flex-col items-center text-center p-md bg-surface rounded-2xl border border-outline-variant/20 hover:border-primary/30 transition-all cursor-default">
+<div class="achievement-icon w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center mb-md shadow-inner transition-transform duration-300">
+<span class="material-symbols-outlined text-on-primary-fixed text-[32px]" style="font-variation-settings: &#39;FILL&#39; 1;">school</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface">Academy Grad</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-xs">Earned Jan 2024</p>
+</div>
+<!-- Locked Badge -->
+<div class="flex flex-col items-center text-center p-md bg-surface-container-low/50 rounded-2xl border border-dashed border-outline-variant/50 opacity-60">
+<div class="w-16 h-16 rounded-full bg-surface-variant/30 flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-outline-variant text-[32px]">lock</span>
+</div>
+<p class="font-label-md text-label-md text-outline">Global Envoy</p>
+<p class="font-label-sm text-label-sm text-outline-variant mt-xs">Locked</p>
+</div>
+</div>
+</div>
+<!-- Achievement Timeline -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-3xl p-xl shadow-sm">
+<h3 class="font-headline-md text-headline-md mb-xl">Growth Timeline</h3>
+<div class="space-y-lg relative">
+<div class="absolute left-[11px] top-0 bottom-0 w-[2px] bg-outline-variant/20"></div>
+<div class="relative flex gap-lg pl-8">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary border-4 border-surface-container-lowest z-10"></div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Leadership Capstone</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Completed final thesis on digital ministry scaling.</p>
+<span class="font-label-sm text-label-sm text-primary">January 2024</span>
+</div>
+</div>
+<div class="relative flex gap-lg pl-8">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-outline-variant border-4 border-surface-container-lowest z-10"></div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Community Impact Award</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Recognized for facilitating 50+ mentor circles.</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant">November 2023</span>
+</div>
+</div>
+<div class="relative flex gap-lg pl-8">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-outline-variant border-4 border-surface-container-lowest z-10"></div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Foundation Entry</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">First step into the Aura Ecosystem academy.</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant">August 2023</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Action Stats -->
+<div class="grid grid-cols-2 gap-md">
+<div class="bg-primary p-lg rounded-3xl text-on-primary">
+<span class="material-symbols-outlined text-[32px] mb-base">military_tech</span>
+<div class="font-display text-[28px] leading-tight">12</div>
+<p class="font-label-sm text-label-sm opacity-80 uppercase tracking-tighter">Badges</p>
+</div>
+<div class="bg-secondary-fixed p-lg rounded-3xl text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[32px] mb-base">history_edu</span>
+<div class="font-display text-[28px] leading-tight">04</div>
+<p class="font-label-sm text-label-sm opacity-80 uppercase tracking-tighter">Certificates</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-surface-container-highest/80 backdrop-blur-xl border-t border-outline-variant/30 flex justify-around items-center p-md z-50">
+<button class="flex flex-col items-center gap-xs text-on-surface-variant">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</button>
+<button class="flex flex-col items-center gap-xs text-on-surface-variant">
+<span class="material-symbols-outlined">school</span>
+<span class="font-label-sm text-label-sm">Learn</span>
+</button>
+<button class="flex flex-col items-center gap-xs text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">emoji_events</span>
+<span class="font-label-sm text-label-sm font-bold">Rewards</span>
+</button>
+<button class="flex flex-col items-center gap-xs text-on-surface-variant">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</button>
+</nav>
+<script>
+        // Simple micro-interaction for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.classList.add('scale-95');
+            });
+            button.addEventListener('mouseup', () => {
+                button.classList.remove('scale-95');
+            });
+        });
+    </script>
+</body></html>

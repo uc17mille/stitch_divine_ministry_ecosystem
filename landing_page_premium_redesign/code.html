@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GraceStream | Digital Ministry Ecosystem</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Geist+Mono:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script type='text/javascript' nonce='LEmHpVch4hndtcb6nblmCQ==' src='https://contribution.usercontent.google.com/3XmZErxNj1m06k6ZM3y3VivLBQUKjZ3fvN6swA7MkVKWMBKv-WiqAfjUiSWbOOO4Qw9hSlD77LWQkI7v3Pu5suQNhak3_hSreEZ2Vv_83NDm8mdHBkt2zqwyDqy3uoaeSdGMTSyARunkJR0nZ3HvGj3hAA11kPJOCvFZxBsz2_NqVtjVqz85oPRov-uCGv5vlqLHdCxkXlbaNTqz2s_8u4bytPlJBUkTvPVvB2fFISXAd6xRJwW29v_JMXLNqY0vRnRbCHixG8Q1a1ZNajYVXJmMaJ6H8ejACDIBnMuGPGYCPwhxyPT79kySFVaq_OEsuQ3ZBsuw1BGIWRxoQKfj0cagud03rwHmd7NARpogGW7udUTQg-2S2K_Cn3X7VLee6M7UZacynoZTB0x5mVb5A5WgM5P0kyAZvHIdK09NxijABGIa1pjCMy0Lqn-cmqGPkoILmcPCuPRAimjYcQHDQRSJxYTu-yad5k9LgJrXuhSBbTwUiDTXAzb3ug0DGrenrYMRC1FH-2Up2NklsYiljXdw8L7PXUsNgdB_lKOe1F_iEBlw8ZybX_utREmSXr0ogi677HI9dfB0Z2xkdedc47w2J0xjFxVIADNz1Ug_M_LGdQqWoiAZKBdTNp32WAJ_aFjW9NdGv7pOf3NHCXgAgh2qNHyi6niW082v_9CqKIYUtdinXV3nQ-169GsJ_Ldu5T8DcLhspGp4JWr0z7a4Djv1zgzMQEp6TchCkg1ZTdngz2WbPETOYqAVE6BxxMfLG-g89P8Xkl6MuN-R0LaQXrBsTsI62jwJvBxYHQ_YmOM7wMlUbASS'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-container-high": "#e2e7ff",
+                "surface-container-highest": "#dae2fd",
+                "tertiary-container": "#872d00",
+                "on-tertiary-fixed": "#380d00",
+                "on-tertiary-container": "#ffa583",
+                "primary-container": "#1e40af",
+                "surface-tint": "#3755c3",
+                "tertiary-fixed": "#ffdbce",
+                "secondary-container": "#d0e1fb",
+                "error-container": "#ffdad6",
+                "on-error-container": "#93000a",
+                "surface-bright": "#faf8ff",
+                "surface-dim": "#d2d9f4",
+                "on-secondary-fixed": "#0b1c30",
+                "on-primary-fixed-variant": "#173bab",
+                "secondary-fixed": "#d3e4fe",
+                "outline-variant": "#c4c5d5",
+                "on-primary": "#ffffff",
+                "on-secondary-fixed-variant": "#38485d",
+                "on-background": "#131b2e",
+                "secondary-fixed-dim": "#b7c8e1",
+                "on-surface-variant": "#444653",
+                "background": "#faf8ff",
+                "tertiary": "#611e00",
+                "tertiary-fixed-dim": "#ffb59a",
+                "error": "#ba1a1a",
+                "primary-fixed": "#dde1ff",
+                "inverse-primary": "#b8c4ff",
+                "inverse-surface": "#283044",
+                "primary-fixed-dim": "#b8c4ff",
+                "on-secondary-container": "#54647a",
+                "secondary": "#505f76",
+                "inverse-on-surface": "#eef0ff",
+                "surface": "#faf8ff",
+                "on-surface": "#131b2e",
+                "primary": "#00288e",
+                "surface-container": "#eaedff",
+                "surface-container-low": "#f2f3ff",
+                "on-tertiary": "#ffffff",
+                "on-secondary": "#ffffff",
+                "on-primary-container": "#a8b8ff",
+                "on-primary-fixed": "#001453",
+                "on-tertiary-fixed-variant": "#802a00",
+                "surface-container-lowest": "#ffffff",
+                "on-error": "#ffffff",
+                "surface-variant": "#dae2fd",
+                "outline": "#757684"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "24px",
+                "full": "9999px"
+            },
+            "spacing": {
+                "3xl": "64px",
+                "sm": "8px",
+                "xs": "4px",
+                "base": "8px",
+                "lg": "24px",
+                "margin": "32px",
+                "md": "16px",
+                "2xl": "48px",
+                "xl": "32px",
+                "gutter": "24px"
+            },
+            "fontFamily": {
+                "headline-lg": ["Geist"],
+                "body-md": ["Geist"],
+                "label-md": ["Geist"],
+                "display": ["Geist"],
+                "label-sm": ["Geist"],
+                "headline-md": ["Geist"],
+                "body-sm": ["Geist"],
+                "body-lg": ["Geist"],
+                "mono": ["Geist Mono"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Geist', sans-serif;
+            background-color: #faf8ff;
+            color: #131b2e;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .glass-header {
+            backdrop-filter: blur(20px);
+            background-color: rgba(250, 248, 255, 0.8);
+        }
+        .border-subtle {
+            border: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body class="selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="docked full-width top-0 sticky bg-surface/80 backdrop-blur-xl z-50 border-b border-outline-variant/30 shadow-sm flex justify-between items-center w-full px-lg py-sm">
+<div class="flex items-center gap-md">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Aura Ministry</span>
+</div>
+<nav class="hidden md:flex items-center gap-xl">
+<a class="text-primary font-bold border-b-2 border-primary py-xs transition-transform duration-200 active:scale-[0.98]" href="#">Home</a>
+<a class="text-on-surface-variant font-medium hover:bg-surface-container-low transition-colors px-sm py-xs rounded-lg" href="#">Academy</a>
+<a class="text-on-surface-variant font-medium hover:bg-surface-container-low transition-colors px-sm py-xs rounded-lg" href="#">Community</a>
+<a class="text-on-surface-variant font-medium hover:bg-surface-container-low transition-colors px-sm py-xs rounded-lg" href="#">Prayer</a>
+</nav>
+<div class="flex items-center gap-md">
+<div class="hidden sm:flex items-center bg-surface-container-low px-md py-xs rounded-full border border-outline-variant/20">
+<span class="material-symbols-outlined text-on-surface-variant mr-xs">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-label-md w-40" placeholder="Search resources..." type="text"/>
+</div>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-full font-label-md hover:opacity-90 transition-all shadow-md">
+                New Prayer Request
+            </button>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-on-surface-variant p-xs cursor-pointer hover:bg-surface-container-high rounded-full transition-colors">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant p-xs cursor-pointer hover:bg-surface-container-high rounded-full transition-colors">settings</span>
+</div>
+</div>
+</header>
+<main class="relative">
+<!-- Hero Section -->
+<section class="relative pt-3xl pb-2xl px-margin max-w-7xl mx-auto overflow-hidden">
+<div class="grid lg:grid-cols-2 gap-2xl items-center">
+<div class="z-10">
+<span class="inline-block px-md py-xs bg-secondary-container text-on-secondary-container rounded-full font-label-sm mb-lg">REDEFINING DIGITAL FELLOWSHIP</span>
+<h1 class="font-display text-display leading-tight mb-md">Elevate Your Spiritual Journey with GraceStream.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-xl max-w-lg">
+                        A precision-crafted ecosystem designed for modern ministries. Connect, grow, and serve in a high-performance environment built for the future of faith.
+                    </p>
+<div class="flex flex-wrap gap-md">
+<button class="bg-primary text-on-primary px-3xl py-md rounded-full font-label-md hover:shadow-xl transition-all flex items-center gap-sm">
+                            Join the Ecosystem <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border border-outline px-3xl py-md rounded-full font-label-md hover:bg-surface-container-low transition-all">
+                            View Academy
+                        </button>
+</div>
+</div>
+<div class="relative">
+<!-- Glassmorphism Card in Hero -->
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
+<div class="relative z-10 border border-outline-variant/30 rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full h-[500px] object-cover" data-alt="A high-end, professional portrait of a diverse community of professionals engaging with digital tablets and holograms representing spiritual connectivity. The setting is a bright, minimalist glass-walled office overlooking a serene morning cityscape. The lighting is soft, natural, and warm, emphasizing a clean and premium SaaS aesthetic with subtle deep blue accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwnIPVaN8zdFXQYx8JReINoMgw6qsUufrTZSLBl5Bz0rqW0w-qMAOvXUDkiY7G0IxP8fnRTAPccv3uFyduEUaq8VuXyefoOGbLdX1_dD8gXv0PxZrw_BBYFFyydyZ31PyNp3mLmrSSWHh-bFJDPZGsEa7xQmemN6tF8pHs1Cdc_QJsGSoMDC54k9jAxrurnQRsFImFCfrVGSuMeUExxMxoP-K8N-LBv8w22RKnC6tSE7OinHzuD56-"/>
+<div class="absolute bottom-md left-md right-md glass-header p-md rounded-xl border border-white/20">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary">groups</span>
+</div>
+<div>
+<p class="font-label-md text-on-surface font-bold">12k+ Active Members</p>
+<p class="font-body-sm text-on-surface-variant">Engaging in mentorship daily.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Modular Grid -->
+<section class="py-2xl px-margin max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg">
+<div class="p-xl bg-surface border border-outline-variant/30 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<p class="font-label-sm text-primary mb-sm">GLOBAL REACH</p>
+<h3 class="font-display text-headline-lg">140+</h3>
+<p class="font-body-sm text-on-surface-variant">Nations connected through GraceStream digital prayer networks.</p>
+</div>
+<div class="p-xl bg-primary text-on-primary rounded-xl shadow-lg flex flex-col justify-between">
+<div>
+<p class="font-label-sm text-on-primary/70 mb-sm">PRAYER REQUESTS</p>
+<h3 class="font-display text-headline-lg">2.4M</h3>
+</div>
+<p class="font-body-sm text-on-primary/80">Petitions lifted daily by our global intercessor community.</p>
+</div>
+<div class="p-xl bg-surface border border-outline-variant/30 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<p class="font-label-sm text-primary mb-sm">ACADEMY GROWTH</p>
+<h3 class="font-display text-headline-lg">85k</h3>
+<p class="font-body-sm text-on-surface-variant">Hours of spiritual leadership content consumed this year.</p>
+</div>
+<div class="p-xl bg-surface-container-highest border border-outline-variant/30 rounded-xl shadow-sm">
+<p class="font-label-sm text-primary mb-sm">MENTORSHIP</p>
+<h3 class="font-display text-headline-lg">98%</h3>
+<p class="font-body-sm text-on-surface-variant">User satisfaction rate in our peer-to-peer digital pods.</p>
+</div>
+</div>
+</section>
+<!-- Featured Courses (Netflix-style) -->
+<section class="py-2xl overflow-hidden">
+<div class="px-margin max-w-7xl mx-auto mb-lg flex justify-between items-end">
+<div>
+<h2 class="font-headline-lg text-headline-lg">Academy Highlights</h2>
+<p class="font-body-md text-on-surface-variant">Master leadership and theology with world-class mentors.</p>
+</div>
+<button class="text-primary font-label-md flex items-center gap-xs hover:gap-sm transition-all">
+                    View Catalog <span class="material-symbols-outlined">arrow_right_alt</span>
+</button>
+</div>
+<div class="flex gap-lg px-margin overflow-x-auto no-scrollbar pb-lg">
+<!-- Course Card 1 -->
+<div class="flex-none w-[320px] group cursor-pointer">
+<div class="relative rounded-xl overflow-hidden mb-md aspect-video border border-outline-variant/20 shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A minimalist and high-definition video thumbnail for a theology course. It features an open leather-bound book on a sleek dark wood desk with a single candle flame providing warm, focused light. The overall mood is academic, serene, and premium, utilizing a color palette of deep browns, creams, and navy blue." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXwUeh_l_j3VW0HqF7IF1Gv2fv5o4KZItX3XhrDrDmma3npVBAD6rZkMuKP4HqIQxehyRNE7zii_I4B6rIHZBBhdBkUrtOC_rDgpbekW0c7REpUKGJFjAZnXl1XASFAUXwqDnDllPcc1K_Ft33CoueJxoJTEFhbGgiQio7gpiH-x1p-kU8K-RN9-FnxgZo1ltYm1WoKs5G5Kzy7-q6f-TVIJnEOUWjrIqnfS7F6xmYsQ5nSpktpKQo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-display" style="font-variation-settings: &#39;FILL&#39; 1;">play_circle</span>
+</div>
+<div class="absolute top-sm right-sm bg-white/90 px-sm py-xs rounded-lg text-label-sm font-bold backdrop-blur-md">12 Lessons</div>
+</div>
+<h4 class="font-headline-md text-body-lg font-bold">The Modern Pastoral Heart</h4>
+<p class="font-body-sm text-on-surface-variant">Dr. Elias Thorne • Leadership</p>
+</div>
+<!-- Course Card 2 -->
+<div class="flex-none w-[320px] group cursor-pointer">
+<div class="relative rounded-xl overflow-hidden mb-md aspect-video border border-outline-variant/20 shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A premium digital education thumbnail showing a minimalist city map with glowing connection nodes. The visual style is highly technical and crisp, with a dark slate background and vibrant cyan and royal blue light trails. It represents digital urban ministry and community building in a modern SaaS design aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmOgothBHiASakCXCphgT6LKmd9w73SNxGQUc8r3MpGSnrBrZ43TgPzhhea3khOXp7RIluaEz0zKD4QZc18hFFrzatmLmxwXvLhsO9p0bjWa9MIGsMOvuMuzxjhh8lRRpVjjZ6aVhF26Nb4bInQA_BsmuNcGWPwmmV-eEgmzPKYhps3rPhdqRX2n9imfw98UPz7G1Xb2iWrwaQGX5IbuDmKwDg9FLKYzQCIzFYom_yrS9ugMD043pl"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-display" style="font-variation-settings: &#39;FILL&#39; 1;">play_circle</span>
+</div>
+<div class="absolute top-sm right-sm bg-white/90 px-sm py-xs rounded-lg text-label-sm font-bold backdrop-blur-md">8 Lessons</div>
+</div>
+<h4 class="font-headline-md text-body-lg font-bold">Urban Outreach Strategy</h4>
+<p class="font-body-sm text-on-surface-variant">Sarah Jenkins • Community</p>
+</div>
+<!-- Course Card 3 -->
+<div class="flex-none w-[320px] group cursor-pointer">
+<div class="relative rounded-xl overflow-hidden mb-md aspect-video border border-outline-variant/20 shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-end spiritual wellness thumbnail showing a macro shot of clear water ripples in a minimalist ceramic bowl. The lighting is bright, high-key white, creating a tranquil and pure aesthetic. Soft shadows and clean edges reflect a premium minimalist design, perfectly suited for a course on mindfulness and prayer." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByDQSmczEJwVNAXHZW6cJhuRlIGUZnbYq8yQeyQJVINfGh2z-iU1LLwkCmQ94P7yUvAPgALouy_MkWOKEDPpbVcUNfBVvqi1q0vcUk6Mo23LXlCDIFcPVM_vAgy1rOEG-i66pdKKtts2nO-HSfEh8eiaOBblmTNESppd8iA9Ko0DB2V922yBjYR7kxpT2pKuWrEtI3j2iabF6Iy5wdse2OCneyYgKbhT-rorlOBDnmEG7Xp2NyJsvo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-display" style="font-variation-settings: &#39;FILL&#39; 1;">play_circle</span>
+</div>
+<div class="absolute top-sm right-sm bg-white/90 px-sm py-xs rounded-lg text-label-sm font-bold backdrop-blur-md">15 Lessons</div>
+</div>
+<h4 class="font-headline-md text-body-lg font-bold">Digital Prayer Disciplines</h4>
+<p class="font-body-sm text-on-surface-variant">Michael Chen • Spiritual Growth</p>
+</div>
+<!-- Course Card 4 -->
+<div class="flex-none w-[320px] group cursor-pointer">
+<div class="relative rounded-xl overflow-hidden mb-md aspect-video border border-outline-variant/20 shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sleek corporate-style thumbnail for a course on organizational ministry. It features a clean white architectural staircase spiraling upwards. The image is bright, sharp, and minimalist, using a cool color palette of whites, grays, and deep navy to convey structural integrity and spiritual ascent." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbfOz_N4uV8dw2-eDzCkswFf83uKxA84UDc3FbKzQfPDbBpvM8biodukf9eqUWR97yfmmGqBN-ohy2xF0DCIPfAEVwdkhVcSgOJ24pU_CMILMr1OGlI2xg4rBPKHBWxWoz00zP8ZrCG5nj0bDWi6yB6C_NEUcUO94icLhpeoMDN0aSeMOeJlT6AHxMg7fHygcmEVBdN1ENqXfXZjUhRnuQ330Rf8RStkjCLkkMhFHkkE3Co-DEkAOH"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-display" style="font-variation-settings: &#39;FILL&#39; 1;">play_circle</span>
+</div>
+<div class="absolute top-sm right-sm bg-white/90 px-sm py-xs rounded-lg text-label-sm font-bold backdrop-blur-md">10 Lessons</div>
+</div>
+<h4 class="font-headline-md text-body-lg font-bold">Scaling Faith Communities</h4>
+<p class="font-body-sm text-on-surface-variant">Visionary Pod • Growth</p>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-2xl px-margin bg-surface-container-low/50">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-center mb-2xl">Stories of Transformation</h2>
+<div class="grid md:grid-cols-3 gap-xl">
+<!-- Testimonial 1 -->
+<div class="p-xl bg-white border border-outline-variant/20 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="flex items-center gap-md mb-lg">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="A professional headshot of a woman in her 30s with a warm and genuine smile. She is in a bright, modern studio with soft natural lighting. The style is professional yet approachable, following a high-end corporate photography aesthetic with a neutral, clean background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMFPESRm7JTpWvtxNAyh1-w_EXeZjW6KNALwhH57zhDaDNxvHdHxAEbAJugelT_jVeC9Xcc1VSwkXbHAmrIdA-43vFJ2VAoX0Kuy2yPx4yd3HqAsy3hVvpYEPp09_rr3mUM7yHCEeeWzKA27pS5A6YLEpbpmGMm0sM3ktOBrKkQKcPJ1p7fFmgdDpPxP8ccFGX8FuAGwnu2tByvJti0qwD07G52VJ4iKrEEukshFV6MwEr95Hphvwn"/>
+<div>
+<p class="font-label-md text-on-surface font-bold">Elena Rodriguez</p>
+<p class="font-body-sm text-on-surface-variant">Global Community Lead</p>
+</div>
+</div>
+<p class="font-body-md text-on-surface italic">"The precision of GraceStream's tools allowed us to scale our local ministry to five continents without losing the intimate connection that makes faith so powerful."</p>
+</div>
+<!-- Testimonial 2 -->
+<div class="p-xl bg-white border border-outline-variant/20 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 transform md:-translate-y-4">
+<div class="flex items-center gap-md mb-lg">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="A headshot of a man in his 40s wearing a clean white shirt, looking thoughtful and confident. The image is captured with a shallow depth of field against a minimalist library background. The lighting is cinematic and soft, emphasizing a premium and high-trust leadership aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQBrP4GH8x5OwoyHTk1uh-QyGXlChrLlCMj4JPF7M7yppztf-dc2_hfsKIyfMzuec8cCskZPEmt-PyTL8eecpxbuvfG3VCbEluEoEqE90HRqeDolsEovxwoWJAOQ6Jcw72z4l8RO9PfLDHa2PMdjMMLH1OsJnMF5aM8uPGJSmJOnLbURILw2Te5Zj4obEhGdtY0XNOuq8NPJ8xbY3M9pd64HGwhEwVIamMcyqleKL7_nuPtz6T_xzx"/>
+<div>
+<p class="font-label-md text-on-surface font-bold">David Okoro</p>
+<p class="font-body-sm text-on-surface-variant">Senior Pastor, New Life</p>
+</div>
+</div>
+<p class="font-body-md text-on-surface italic">"Aura Ministry provides the digital backbone we didn't know we needed. It's not just a platform; it's a sanctuary for the digital age."</p>
+</div>
+<!-- Testimonial 3 -->
+<div class="p-xl bg-white border border-outline-variant/20 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="flex items-center gap-md mb-lg">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="A portrait of a young professional man with glasses, looking engaged and creative. He is in a brightly lit co-working space with minimalist design elements. The overall look is clean, modern, and tech-forward, with a focus on high-fidelity details and a calm, professional mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBfjWN7NkmstlWwOwgtCcHB0ib4F8K-19nKjOsYOUpU9xLGpgsBIpYTOwNh9gfGKpf5JS-l0R1B1v9KEf-1qzR_QaxikEh1ORhXm7zLtRzxfEUQNt_FnK8B1suR2MyXiRwej6LcxkUOXE6QIxr80IQiksEoxuVzAbyoHWkBBOkUBKyN6L3Zw5eQaiCcBYrZaPuTUydH5sUjNfVvjSUPF-2rTI5fDxEUIrupjY8AeIGRYx8WGenaM0v"/>
+<div>
+<p class="font-label-md text-on-surface font-bold">Liam Peterson</p>
+<p class="font-body-sm text-on-surface-variant">Tech Director</p>
+</div>
+</div>
+<p class="font-body-md text-on-surface italic">"The user experience is flawless. For a team that demands high performance, GraceStream is the only ecosystem that actually keeps up."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Donation CTA Section -->
+<section class="py-3xl px-margin">
+<div class="max-w-5xl mx-auto bg-inverse-surface rounded-xl p-2xl md:p-3xl relative overflow-hidden text-center md:text-left">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+<div class="relative z-10 grid md:grid-cols-2 gap-xl items-center">
+<div>
+<h2 class="font-display text-headline-lg text-inverse-on-surface mb-md">Fuel the Digital Mission.</h2>
+<p class="font-body-lg text-inverse-on-surface/80 mb-xl">Your support enables us to provide free academy access to emerging leaders in developing regions. Join us in building the global ecosystem.</p>
+<div class="flex flex-wrap gap-md justify-center md:justify-start">
+<button class="bg-primary-fixed text-on-primary-fixed px-3xl py-md rounded-full font-label-md hover:bg-white transition-all shadow-lg">Partner With Us</button>
+<button class="border border-outline-variant/30 text-inverse-on-surface px-3xl py-md rounded-full font-label-md hover:bg-white/10 transition-all">Learn More</button>
+</div>
+</div>
+<div class="bg-white/5 border border-white/10 p-xl rounded-xl backdrop-blur-sm">
+<div class="flex justify-between items-center mb-lg">
+<p class="font-label-md text-inverse-on-surface">Monthly Goal</p>
+<p class="font-label-md text-inverse-on-surface">82%</p>
+</div>
+<div class="w-full h-2 bg-white/10 rounded-full overflow-hidden mb-lg">
+<div class="h-full bg-primary-fixed w-[82%]"></div>
+</div>
+<div class="grid grid-cols-3 gap-md">
+<button class="bg-white/10 hover:bg-white/20 text-inverse-on-surface py-sm rounded-lg font-mono text-label-sm transition-all">$25</button>
+<button class="bg-white/10 hover:bg-white/20 text-inverse-on-surface py-sm rounded-lg font-mono text-label-sm transition-all">$50</button>
+<button class="bg-primary-fixed text-on-primary-fixed py-sm rounded-lg font-mono text-label-sm transition-all">$100</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-lg px-xl flex flex-col md:flex-row justify-between items-center gap-md bg-surface border-t border-outline-variant/20">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Aura Ministry Ecosystem. Precision-Crafted Utility.</p>
+<div class="flex items-center gap-xl">
+<a class="font-label-sm text-label-sm text-on-secondary-container hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="font-label-sm text-label-sm text-on-secondary-container hover:text-primary transition-colors" href="#">Terms</a>
+<a class="font-label-sm text-label-sm text-on-secondary-container hover:text-primary transition-colors" href="#">Support</a>
+<a class="font-label-sm text-label-sm text-on-secondary-container hover:text-primary transition-colors" href="#">API</a>
+</div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">public</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">alternate_email</span>
+</div>
+</footer>
+<!-- SideNavBar (Mobile Trigger Hidden, Logic Placeholder) -->
+<div class="fixed inset-0 bg-surface z-[60] hidden flex flex-col p-md" id="mobile-menu">
+<div class="flex justify-between items-center mb-xl">
+<span class="font-headline-md font-black text-primary">Aura</span>
+<button class="material-symbols-outlined" onclick="document.getElementById(&#39;mobile-menu&#39;).classList.add(&#39;hidden&#39;)">close</button>
+</div>
+<nav class="flex flex-col gap-sm">
+<a class="p-md bg-secondary-container text-on-secondary-container font-semibold rounded-xl flex items-center gap-md" href="#">
+<span class="material-symbols-outlined">dashboard</span> Dashboard
+            </a>
+<a class="p-md text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-md" href="#">
+<span class="material-symbols-outlined">school</span> Academy
+            </a>
+<a class="p-md text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-md" href="#">
+<span class="material-symbols-outlined">diversity_3</span> Mentorship
+            </a>
+<a class="p-md text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-md" href="#">
+<span class="material-symbols-outlined">folded_hands</span> Prayer
+            </a>
+</nav>
+</div>
+<script>
+        // Micro-interaction for scroll effects
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+
+        // Simple Intersection Observer for Fade-in effects
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

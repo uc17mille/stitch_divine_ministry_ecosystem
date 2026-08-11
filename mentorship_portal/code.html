@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Spiritual Mentorship | Aethelgard</title>
+<script type='text/javascript' nonce='sAuDJXfGugYB6yGMG1j75g==' src='https://contribution.usercontent.google.com/xYOTP24wXT3VDFfcwjlJPHLm8jOWgnNfgWR7EBnrl1QZE0Opv0Y4v-GD-h5_tQxLSlWaY4d08NKGe9R6u7lF0l5mxyc4Lg8HQbMlBp7BbbnLhyuuDfOSWtNecHPLH5dJ2MctzKSRVxnR8GxUSwBeqa-IdRTYE-JpKrjqc8n3ShTPkX2WII3wyO-5b24xdS_damRdY1Oo4ZxgF91PYE9ePV67Ck0nTKLQejEsu76QvXfQ0xGBzof36YIAfOVXSaddduxkNajVqt9t2nA7LxfguieSxX8xPcxRSMMa3BGZNvzICvBzMLJAk6LHBWNskPS5GN5uS7O3el8VubZ0qtKW4fGnM5__wZCXkIpE0jh_MQd13kTP717haxo0sNQkMLoVZZHQvmKqZmyyQMDI6rgEmkfKfp27-M8EWEQDEzZ0syCoHTtnKtPU9zkHjPrbB7XU6WNzbruGJmO892xlYp0tCFRk-WhkIBJ0A2T7DZmtORed19iIXs4aVJxbd7QWXXPWfKIl00lLBhmxwbN_ec8YjBZa8WPl5-zY1IyzYpIGtXsnF-onIyP1IFVzAJ5_DicvFEP0zpmFDA7TW6z-CvzEWL-0sUI7PuFqK9MhtAnlVMCktPm_gIPqr4ib_0mqH_Kg1df5ii-sFdVmmpaXN4x5NYxZUJFlfcRjSZAQ8641RYCtMwOOAQMyXvQEESibJ5G6vx-1B9kR9RzXhWz6J0CA2V3745F0S4GUMhzXdGOxpK8PT5QRz80LTRilA94d07FvXyMGeUbOYObbqRcufvh-IFY_ntXepXNPdNV8fOtVmS8HyiMKoTVY'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Geist+Mono:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Geist', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .mentor-card-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        }
+        /* Custom scrollbar for high-end feel */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #cbd5e1; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "surface-bright": "#faf8ff",
+                "surface": "#faf8ff",
+                "surface-container": "#eaedff",
+                "tertiary-fixed-dim": "#ffb59a",
+                "on-tertiary-container": "#ffa583",
+                "on-primary-container": "#a8b8ff",
+                "on-tertiary-fixed-variant": "#802a00",
+                "on-error-container": "#93000a",
+                "background": "#faf8ff",
+                "surface-container-lowest": "#ffffff",
+                "secondary-fixed-dim": "#b7c8e1",
+                "on-secondary-fixed": "#0b1c30",
+                "surface-container-low": "#f2f3ff",
+                "on-tertiary": "#ffffff",
+                "on-surface-variant": "#444653",
+                "on-background": "#131b2e",
+                "outline-variant": "#c4c5d5",
+                "tertiary": "#611e00",
+                "on-secondary-fixed-variant": "#38485d",
+                "surface-container-high": "#e2e7ff",
+                "inverse-surface": "#283044",
+                "surface-tint": "#3755c3",
+                "on-surface": "#131b2e",
+                "inverse-primary": "#b8c4ff",
+                "error": "#ba1a1a",
+                "primary-fixed-dim": "#b8c4ff",
+                "outline": "#757684",
+                "tertiary-fixed": "#ffdbce",
+                "surface-container-highest": "#dae2fd",
+                "error-container": "#ffdad6",
+                "secondary-container": "#d0e1fb",
+                "primary-container": "#1e40af",
+                "on-tertiary-fixed": "#380d00",
+                "primary": "#00288e",
+                "on-primary": "#ffffff",
+                "on-primary-fixed": "#001453",
+                "primary-fixed": "#dde1ff",
+                "surface-variant": "#dae2fd",
+                "secondary": "#505f76",
+                "on-primary-fixed-variant": "#173bab",
+                "inverse-on-surface": "#eef0ff",
+                "on-secondary-container": "#54647a",
+                "tertiary-container": "#872d00",
+                "on-secondary": "#ffffff",
+                "on-error": "#ffffff",
+                "surface-dim": "#d2d9f4",
+                "secondary-fixed": "#d3e4fe"
+              },
+              "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "2xl": "24px",
+                "full": "9999px"
+              },
+              "spacing": {
+                "margin": "32px",
+                "gutter": "24px",
+                "2xl": "48px",
+                "base": "8px",
+                "xs": "4px",
+                "sm": "8px",
+                "md": "16px",
+                "3xl": "64px",
+                "lg": "24px",
+                "xl": "32px"
+              },
+              "fontFamily": {
+                "display": ["Geist"],
+                "body-lg": ["Geist"],
+                "body-md": ["Geist"],
+                "body-sm": ["Geist"],
+                "label-sm": ["Geist"],
+                "headline-lg": ["Geist"],
+                "mono": ["Geist Mono"],
+                "label-md": ["Geist"],
+                "headline-md": ["Geist"],
+                "headline-lg-mobile": ["Geist"]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-surface-bright text-on-surface min-h-screen flex overflow-hidden">
+<!-- SideNavBar Component (Shared Component Logic) -->
+<aside class="hidden md:flex w-72 h-screen flex-col bg-surface-container-low border-r border-outline-variant/20 p-md space-y-base z-40 transition-all">
+<div class="flex items-center gap-md px-md py-lg">
+<span class="font-display text-headline-md font-bold text-on-surface">Digital Ministry</span>
+</div>
+<nav class="flex-1 space-y-xs overflow-y-auto">
+<!-- Active State Logic: Mentorship is active -->
+<a class="flex items-center gap-md text-on-surface-variant hover:bg-surface-container-high rounded-xl px-md py-sm transition-all active:scale-[0.98] duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-md bg-primary-container text-on-primary-container rounded-xl px-md py-sm transition-all active:scale-[0.98] duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="font-body-sm">Mentorship</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant hover:bg-surface-container-high rounded-xl px-md py-sm transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-body-sm">Community</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant hover:bg-surface-container-high rounded-xl px-md py-sm transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome_heart">auto_awesome_mosaic</span>
+<span class="font-body-sm">Prayer</span>
+</a>
+<a class="flex items-center gap-md text-on-surface-variant hover:bg-surface-container-high rounded-xl px-md py-sm transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-body-sm">Settings</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-outline-variant/20 pt-md space-y-xs">
+<button class="w-full flex items-center justify-center gap-sm bg-primary text-on-primary rounded-xl py-md font-label-md active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+                New Request
+            </button>
+<a class="flex items-center gap-md text-on-surface-variant hover:bg-surface-container-high rounded-xl px-md py-sm transition-all mt-4" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+<span class="font-body-sm">Help</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col h-screen overflow-y-auto">
+<!-- TopNavBar Component -->
+<header class="fixed top-0 right-0 left-0 md:left-72 z-30 glass-header bg-surface/80 border-b border-outline-variant/30 h-16 px-margin flex justify-between items-center">
+<div class="flex items-center gap-xl">
+<h1 class="font-display text-headline-md font-bold text-primary">Spiritual Mentorship</h1>
+<!-- Search Bar -->
+<div class="hidden lg:flex items-center bg-surface-container-low border border-outline-variant/30 rounded-full px-md py-xs w-80">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-sm w-full placeholder:text-outline ml-2" placeholder="Find a mentor or topic..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<div class="text-right hidden sm:block">
+<p class="font-label-md text-on-surface">Alex Grayson</p>
+<p class="font-label-sm text-outline">Level 4 Mentee</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-container overflow-hidden border border-outline-variant/20">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a young adult male with a kind expression, wearing business casual attire. The photography is clean with a soft-focus office background, matching the minimalist light-mode aesthetic of the Aura Digital Ministry platform. Professional lighting highlights subtle textures, reflecting a corporate yet approachable personality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhpQ2zbDCDK8XyGZh13BHQHwXFriuIQabtabGYS4ps4Mzq3GUB5OHOQeTI_MQFv6flw1tPdlQwz5SSH1CMImsOGfTfd5eUtVpZfYGamqmmXJfumCNaqtNDIm7LUeCj_H8At0N3M-04n6MRDFARDVUX_f_veph2jqpKtc859YKml0jJWYH08oYkC0NW6NlwtTw5zP_vqip9vct0cZip-GOPVU5ptuioKqCmkGCYqtJ5hcz9gbOuixq2"/>
+</div>
+</div>
+</header>
+<!-- Content Area -->
+<div class="pt-24 px-margin pb-xl max-w-7xl mx-auto w-full">
+<div class="bento-grid">
+<!-- Assigned Mentor Widget (Primary Card) -->
+<section class="col-span-12 lg:col-span-8 bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-xl flex flex-col md:flex-row gap-xl mentor-card-shadow overflow-hidden relative">
+<!-- Subtle background decoration -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="w-32 h-32 md:w-48 md:h-48 rounded-2xl overflow-hidden shrink-0 border border-outline-variant/10">
+<img class="w-full h-full object-cover" data-alt="A portrait of an experienced spiritual leader, a middle-aged woman with a serene and empathetic face. She is in a bright, modern study filled with books and plants. The lighting is natural and warm, adhering to the premium and clean Aura design system. The image conveys wisdom, guidance, and peaceful authority." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsViLoyWCGYqsXP1CM52sWexoo0f3PrGa4n554keUdXuOyX0nVjRU4v1Dq41r7bDp_YoK4-GofHz05J4hca7gvp3zRXipgN5c9JjzNar9sNM9sfXNQ7KrLijhVEUgVcDa3pacINrEVa8g6613vYnsf2mQtlSdajzLaTFLp419BsnNhNMHLEjDKV67v1SicfqtERr3uVHrJTV_swwRDAx2VBd55BwI91DXBkq5hauBK2AvQ88blRoYb"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-sm">
+<div>
+<span class="bg-secondary-container text-on-secondary-container text-label-sm px-sm py-1 rounded-full uppercase tracking-wider mb-xs inline-block">Assigned Mentor</span>
+<h2 class="font-display text-headline-lg text-on-surface">Dr. Sarah Jenkins</h2>
+<p class="font-body-md text-primary font-medium">Theology & Faith Transitions</p>
+</div>
+<div class="flex gap-xs">
+<button class="p-base rounded-full border border-outline-variant/30 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="calendar_today">calendar_today</span>
+</button>
+</div>
+</div>
+<p class="font-body-sm text-on-surface-variant max-w-lg mb-md leading-relaxed">
+                                Helping leaders navigate deep spiritual formation for over 15 years. Specializing in the intersection of traditional theology and modern digital ministry ecosystems.
+                            </p>
+</div>
+<div class="flex flex-wrap gap-md">
+<button class="bg-primary text-on-primary px-xl py-md rounded-xl font-label-md flex items-center gap-sm active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail">mail</span>
+                                Message
+                            </button>
+<button class="border border-outline-variant text-on-surface px-xl py-md rounded-xl font-label-md hover:bg-surface-container-low transition-all">
+                                View Profile
+                            </button>
+</div>
+</div>
+</section>
+<!-- Mentorship Progress Stats -->
+<section class="col-span-12 lg:col-span-4 bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-xl mentor-card-shadow flex flex-col">
+<h3 class="font-display text-headline-md text-on-surface mb-lg">Your Progress</h3>
+<div class="space-y-xl flex-1">
+<div class="flex items-center justify-between">
+<div>
+<p class="font-label-sm text-outline uppercase tracking-widest">Total Hours</p>
+<p class="font-display text-headline-lg text-primary">24.5</p>
+</div>
+<div class="w-16 h-16 flex items-center justify-center rounded-full bg-primary-fixed-dim/20">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="timer">timer</span>
+</div>
+</div>
+<div class="space-y-sm">
+<div class="flex justify-between font-label-md text-on-surface-variant">
+<span>Growth Milestone</span>
+<span>82%</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-1000" style="width: 82%"></div>
+</div>
+<p class="font-body-sm text-outline">4.5 hours until next level certificate</p>
+</div>
+<div class="grid grid-cols-2 gap-md pt-md border-t border-outline-variant/20">
+<div>
+<p class="font-label-sm text-outline">Sessions</p>
+<p class="font-display text-headline-md text-on-surface">12</p>
+</div>
+<div>
+<p class="font-label-sm text-outline">Topics</p>
+<p class="font-display text-headline-md text-on-surface">4</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Upcoming Meetings -->
+<section class="col-span-12 lg:col-span-4 flex flex-col gap-lg">
+<div class="flex items-center justify-between">
+<h3 class="font-display text-headline-md text-on-surface">Upcoming Sessions</h3>
+<a class="text-primary font-label-md hover:underline" href="#">View All</a>
+</div>
+<div class="space-y-md">
+<!-- Meeting Item -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-md flex gap-md items-center group hover:border-primary/50 transition-all">
+<div class="w-14 h-14 rounded-lg bg-surface-container-high flex flex-col items-center justify-center border border-outline-variant/20 shrink-0">
+<span class="text-label-sm text-primary font-bold uppercase">Oct</span>
+<span class="text-headline-md text-on-surface leading-none">12</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-label-md text-on-surface truncate">Theology of Work</h4>
+<p class="text-body-sm text-on-surface-variant">10:00 AM • Zoom</p>
+</div>
+<button class="p-sm text-outline group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<!-- Meeting Item -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-md flex gap-md items-center group hover:border-primary/50 transition-all opacity-80">
+<div class="w-14 h-14 rounded-lg bg-surface-container-high flex flex-col items-center justify-center border border-outline-variant/20 shrink-0">
+<span class="text-label-sm text-primary font-bold uppercase">Oct</span>
+<span class="text-headline-md text-on-surface leading-none">19</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-label-md text-on-surface truncate">Leadership Foundations</h4>
+<p class="text-body-sm text-on-surface-variant">02:30 PM • Office</p>
+</div>
+<button class="p-sm text-outline group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Visual Timeline Indicator -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-md">
+<div class="flex items-center gap-md">
+<div class="relative py-xl flex-1">
+<div class="h-[1px] w-full bg-outline-variant/30 absolute top-1/2 left-0"></div>
+<div class="flex justify-between items-center relative z-10">
+<div class="w-3 h-3 rounded-full bg-primary border-4 border-surface-bright"></div>
+<div class="w-3 h-3 rounded-full bg-primary border-4 border-surface-bright"></div>
+<div class="w-3 h-3 rounded-full bg-outline-variant border-4 border-surface-bright"></div>
+<div class="w-3 h-3 rounded-full bg-outline-variant border-4 border-surface-bright"></div>
+</div>
+</div>
+<span class="font-label-sm text-outline shrink-0">2/4 Scheduled</span>
+</div>
+</div>
+</section>
+<!-- Mentor Directory -->
+<section class="col-span-12 lg:col-span-8 flex flex-col gap-lg">
+<div class="flex items-center justify-between">
+<h3 class="font-display text-headline-md text-on-surface">Mentor Directory</h3>
+<div class="flex items-center gap-sm">
+<span class="font-body-sm text-on-surface-variant">Filter by Specialty</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer" data-icon="filter_list">filter_list</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<!-- Mentor Card -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-md hover:shadow-lg transition-all group flex flex-col">
+<div class="flex gap-md mb-md">
+<div class="w-16 h-16 rounded-xl overflow-hidden border border-outline-variant/10 shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="A portrait of a male mentor with a friendly and enthusiastic expression, set against a modern architectural background. The color palette is dominated by soft grays and deep blues, aligning with the Aura brand guidelines. High-definition photography capturing skin texture and warmth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtvl33YNIC9oJou01imsUCFdk8NK7PPaEveNAd11ZEVDPzcSN9mC3joFXggs4X1zuXmByFmd8DcZV-fMhM_f2uxDi6cvW5ngsFAE3U7IfNFf5lwwSkKfh-WFYJnNLTO9mHeNeHkWNfCiAD0OQg-uxW9_-eV5cAK9S2Y1QB7e_gY1w20KKRxQea3YJE_fxIvNsAH5SFLBzr-4ktMu2V1DsCWXnETAtjtpH1HAL-flxjH5kzWW2XlImR"/>
+</div>
+<div class="min-w-0">
+<h4 class="font-display text-headline-md text-on-surface truncate">Marcus Chen</h4>
+<p class="font-body-sm text-primary">Youth Ministry</p>
+</div>
+</div>
+<p class="font-body-sm text-on-surface-variant mb-lg line-clamp-2">Expert in digital outreach strategies for Gen Z and community building through technology.</p>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex items-center gap-xs text-secondary font-label-sm">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+                                    Available Now
+                                </div>
+<button class="bg-surface-container-low text-primary px-lg py-sm rounded-lg font-label-md hover:bg-primary hover:text-on-primary transition-all">Book Session</button>
+</div>
+</div>
+<!-- Mentor Card -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-2xl p-md hover:shadow-lg transition-all group flex flex-col">
+<div class="flex gap-md mb-md">
+<div class="w-16 h-16 rounded-xl overflow-hidden border border-outline-variant/10 shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="A professional portrait of an African-American woman mentor, looking confident and inspiring. She is in a minimalist loft setting with large windows and bright light. The image has a clean, airy feel that complements the premium light-mode UI design. Emphasis on natural elegance and modern professional style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC73-ucIp5dAF_ewQBBcwOWmm29-np_bJFiR2H5pFW3M2hE9JgDiHrpLsGD81bY8p6zyWsV5XePKpfglyruaDrGKIR_eVmNK03Mt7wXU-S6vTcovn8WJX1c2X1Dn4gSi9frwDAsFKhzFJ5vN5o1sTRGhpYHClqF-zUAMcxBQzGGcYnKUGxi24t1z4KXUtrr9UtTeu1JO7MT51nKDCP65H0rwNCtBLhC3NV6zwPAdQU12A4tsy3yMKha"/>
+</div>
+<div class="min-w-0">
+<h4 class="font-display text-headline-md text-on-surface truncate">Rev. Elena Vance</h4>
+<p class="font-body-sm text-primary">Organizational Leadership</p>
+</div>
+</div>
+<p class="font-body-sm text-on-surface-variant mb-lg line-clamp-2">Leading non-profit transformations and global ecclesiastical structures for 20 years.</p>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex items-center gap-xs text-secondary font-label-sm">
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                                    Waitlist
+                                </div>
+<button class="bg-surface-container-low text-primary px-lg py-sm rounded-lg font-label-md hover:bg-primary hover:text-on-primary transition-all">Join Waitlist</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Footer Component -->
+<footer class="mt-auto border-t border-outline-variant/30 bg-surface-container-lowest py-xl">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin max-w-7xl mx-auto gap-lg">
+<div class="flex items-center gap-md">
+<span class="font-display text-headline-sm font-bold text-primary">Aethelgard</span>
+<p class="font-body-sm text-secondary">© 2024 Digital Ministry Ecosystem. All rights reserved.</p>
+</div>
+<div class="flex gap-xl">
+<a class="font-body-sm text-secondary hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-body-sm text-secondary hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-sm text-secondary hover:text-primary transition-colors" href="#">Contact Support</a>
+</div>
+</div>
+</footer>
+</main>
+<!-- Mobile Navigation Bar (Shared Components Rule) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-surface/90 backdrop-blur-xl border-t border-outline-variant/20 flex justify-around items-center px-md z-50">
+<button class="flex flex-col items-center gap-xs text-outline">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-[10px] font-label-sm uppercase">Home</span>
+</button>
+<button class="flex flex-col items-center gap-xs text-primary">
+<span class="material-symbols-outlined" data-icon="school" style="font-variation-settings: &#39;FILL&#39; 1;">school</span>
+<span class="text-[10px] font-label-sm uppercase">Mentors</span>
+</button>
+<button class="flex flex-col items-center gap-xs text-outline">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="text-[10px] font-label-sm uppercase">Social</span>
+</button>
+<button class="flex flex-col items-center gap-xs text-outline">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[10px] font-label-sm uppercase">Profile</span>
+</button>
+</nav>
+<script>
+        // Micro-interactions and subtle hover effects
+        document.querySelectorAll('.mentor-card-shadow').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>
