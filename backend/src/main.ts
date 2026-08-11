@@ -7,7 +7,13 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: true,
+    origin: process.env.NODE_ENV === 'production'
+      ? [
+          /\.vercel\.app$/,
+          /\.railway\.app$/,
+          process.env.FRONTEND_URL,
+        ].filter(Boolean)
+      : true,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   });
