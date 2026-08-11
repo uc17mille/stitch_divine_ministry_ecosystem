@@ -19,12 +19,18 @@ api.interceptors.response.use(
   (res) => res,
   (error) => {
     if (error.response?.status === 401 && typeof window !== 'undefined') {
-      // Temporarily disabled for frontend MVP so mock tokens don't trigger logout loops
-      // localStorage.removeItem('aura_token');
-      // window.location.href = '/login';
-      console.warn('401 Unauthorized - Intercepted but auto-logout disabled for MVP');
+      console.warn('401 Unauthorized - Intercepted');
     }
-    return Promise.reject(error.response?.data || error);
+    const data = error.response?.data;
+    if (data) {
+      return Promise.reject(data);
+    }
+    if (!error.response && error.message === 'Network Error') {
+      return Promise.reject({
+        message: 'Unable to connect to backend server. Please check NEXT_PUBLIC_API_URL in Vercel Environment Variables.'
+      });
+    }
+    return Promise.reject(error);
   }
 );
 
