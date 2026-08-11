@@ -14,8 +14,8 @@
     --border-color: rgba(0, 0, 0, 0.08);
     --text-primary: #0f172a;
     --text-secondary: #475569;
-    --accent-primary: #6366f1;
-    --accent-secondary: #8b5cf6;
+    --accent-primary: #4f46e5;
+    --accent-secondary: #3730a3;
     --accent-gold: #f59e0b;
     --accent-emerald: #10b981;
     --accent-rose: #f43f5e;
@@ -29,8 +29,8 @@
   body {
     @apply bg-slate-50 text-slate-900 font-sans antialiased;
     background-image: 
-      radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 60%);
+      radial-gradient(ellipse at 20% 50%, rgba(79, 70, 229, 0.09) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(245, 158, 11, 0.06) 0%, transparent 60%);
   }
 
   h1, h2, h3, h4, h5, h6 { @apply font-bold text-slate-900; }
