@@ -8,15 +8,12 @@ export class PrismaService extends PrismaClient implements OnModuleInit, OnModul
     super({});
   }
   async onModuleInit() {
-    await this.$connect();
     try {
-      await this.$executeRawUnsafe(`PRAGMA journal_mode = WAL;`);
-      await this.$executeRawUnsafe(`PRAGMA synchronous = NORMAL;`);
-      await this.$executeRawUnsafe(`PRAGMA cache_size = 10000;`);
-    } catch {
-      // Ignored if non-sqlite
+      await this.$connect();
+      await this.autoSeed();
+    } catch (err) {
+      console.error('⚠️ Database connection deferred or failed:', err);
     }
-    await this.autoSeed();
   }
 
   private async autoSeed() {
