@@ -12,14 +12,15 @@ export class AuthService {
   ) {}
 
   async register(dto: RegisterDto) {
-    const existing = await this.prisma.user.findUnique({ where: { email: dto.email } });
+    const cleanEmail = dto.email.trim().toLowerCase();
+    const existing = await this.prisma.user.findUnique({ where: { email: cleanEmail } });
     if (existing) throw new ConflictException('Email already in use');
 
     const passwordHash = await bcrypt.hash(dto.password, 12);
 
     const user = await this.prisma.user.create({
       data: {
-        email: dto.email,
+        email: cleanEmail,
         passwordHash,
         profile: {
           create: { firstName: dto.firstName, lastName: dto.lastName },
@@ -36,8 +37,9 @@ export class AuthService {
   }
 
   async login(dto: LoginDto) {
+    const cleanEmail = dto.email.trim().toLowerCase();
     const user = await this.prisma.user.findUnique({
-      where: { email: dto.email },
+      where: { email: cleanEmail },
       include: { profile: true, onboardingDetails: true },
     });
     if (!user) throw new UnauthorizedException('Invalid credentials');
