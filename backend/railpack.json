@@ -1,0 +1,17 @@
+{
+  "$schema": "https://railpack.com/config.schema.json",
+  "packages": {
+    "node": "20"
+  },
+  "steps": {
+    "install": {
+      "commands": ["npm install"]
+    },
+    "build": {
+      "commands": ["npx prisma generate && npm run build"]
+    }
+  },
+  "deploy": {
+    "startCommand": "node dist/main"
+  }
+}
