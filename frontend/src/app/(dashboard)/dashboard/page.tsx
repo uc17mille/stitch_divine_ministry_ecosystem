@@ -66,7 +66,7 @@ export default function DashboardPage() {
   // Live enrollments query
   const { data: userEnrollments = [] } = useQuery({
     queryKey: ['student-dash-enrollments', user?.id],
-    queryFn: () => user?.id ? coursesApi.getUserEnrollments(user.id) : Promise.resolve([]),
+    queryFn: () => user?.id ? coursesApi.getMyEnrollments() : Promise.resolve([]),
     enabled: !!user?.id,
     retry: 1,
   });
@@ -74,7 +74,7 @@ export default function DashboardPage() {
   // Live prayers query
   const { data: prayerRequests = [] } = useQuery({
     queryKey: ['student-dash-prayers'],
-    queryFn: () => prayerApi.getAll(),
+    queryFn: () => prayerApi.getRequests(),
     retry: 1,
   });
 
