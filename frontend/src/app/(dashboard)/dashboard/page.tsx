@@ -92,14 +92,14 @@ export default function DashboardPage() {
   const firstName = user?.profile?.firstName || user?.email?.split('@')[0] || 'Leader';
 
   return (
-    <div className="p-6 lg:p-10 max-w-7xl mx-auto space-y-8 bg-slate-50 min-h-screen font-sans selection:bg-indigo-500/20">
+    <div className="p-4 sm:p-6 lg:p-10 max-w-7xl mx-auto space-y-6 sm:space-y-8 bg-slate-50 min-h-screen font-sans selection:bg-indigo-500/20">
       
       {/* 1. 2026 SAAS HERO BANNER */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="relative bg-gradient-to-r from-slate-900 via-indigo-950 to-blue-950 rounded-[2.5rem] p-8 lg:p-10 text-white shadow-2xl shadow-indigo-950/20 overflow-hidden border border-slate-800 flex flex-col lg:flex-row lg:items-center justify-between gap-8"
+        className="relative bg-gradient-to-r from-slate-900 via-indigo-950 to-blue-950 rounded-3xl sm:rounded-[2.5rem] p-5 sm:p-8 lg:p-10 text-white shadow-2xl shadow-indigo-950/20 overflow-hidden border border-slate-800 flex flex-col lg:flex-row lg:items-center justify-between gap-6 sm:gap-8"
       >
         {/* Glow background effects */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none" />

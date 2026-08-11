@@ -29,13 +29,33 @@ export function Sidebar() {
 
   return (
     <>
-      {/* ---------------- MOBILE TOGGLE ---------------- */}
-      <button 
-        onClick={() => setMobileOpen(!mobileOpen)} 
-        className="fixed top-4 left-4 z-50 md:hidden p-3 bg-white/90 backdrop-blur-lg border border-slate-200 shadow-xl rounded-2xl text-slate-800 hover:bg-white transition-all active:scale-95"
-      >
-        {mobileOpen ? <X size={20} /> : <Menu size={20} />}
-      </button>
+      {/* ---------------- MOBILE TOP NAVBAR ---------------- */}
+      <header className="sticky top-0 z-30 md:hidden w-full bg-white/90 backdrop-blur-xl border-b border-slate-200/80 px-4 py-3 flex items-center justify-between shadow-sm">
+        <div className="flex items-center gap-3">
+          <button 
+            onClick={() => setMobileOpen(!mobileOpen)} 
+            className="p-2.5 bg-slate-100/80 hover:bg-slate-200/80 rounded-xl text-slate-800 transition-all active:scale-95"
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+          <Link href="/" className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-indigo-600 to-blue-600 flex items-center justify-center font-black text-white text-sm shadow-sm">
+              R
+            </div>
+            <span className="font-extrabold text-slate-900 tracking-tight text-base">Lumora</span>
+          </Link>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <span className="px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wider bg-indigo-50 text-indigo-600 border border-indigo-100 rounded-md">
+            {user?.role?.toLowerCase() || 'student'}
+          </span>
+          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-sky-500 flex items-center justify-center text-white font-black text-xs shadow-sm">
+            {user?.profile?.firstName?.[0] || user?.email?.[0]?.toUpperCase() || 'U'}
+          </div>
+        </div>
+      </header>
 
       {/* Mobile Overlay */}
       <AnimatePresence>
