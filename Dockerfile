@@ -3,11 +3,11 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 
 COPY backend/package*.json ./
+COPY backend/prisma ./prisma/
 RUN npm install
 
 COPY backend/ .
 
-RUN npx prisma generate
 RUN npm run build
 
 FROM node:20-alpine AS runner
