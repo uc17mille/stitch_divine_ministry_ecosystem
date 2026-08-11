@@ -34,4 +34,6 @@ async function bootstrap() {
   console.log(`🚀 Backend running on port ${port}`);
   console.log(`📚 Swagger docs available at /api/docs`);
 }
-bootstrap();
+bootstrap().catch((err) => {
+  console.error('❌ Fatal error during bootstrap:', err);
+});
