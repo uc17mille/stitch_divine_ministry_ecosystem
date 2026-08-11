@@ -18,53 +18,59 @@ export class PrismaService extends PrismaClient implements OnModuleInit, OnModul
 
   private async autoSeed() {
     try {
-      const userCount = await this.user.count();
-      if (userCount === 0) {
-        console.log('🌱 Empty database detected! Auto-seeding full ecosystem data...');
+      console.log('🌱 Checking and seeding ecosystem accounts & data...');
 
-        // 1. Categories
-        const cat1 = await this.courseCategory.upsert({ where: { name: 'Leadership' }, update: {}, create: { name: 'Leadership', description: 'Ministry leadership courses' } });
-        const cat2 = await this.courseCategory.upsert({ where: { name: 'Theology' }, update: {}, create: { name: 'Theology', description: 'Biblical theology courses' } });
-        const cat3 = await this.courseCategory.upsert({ where: { name: 'Worship' }, update: {}, create: { name: 'Worship', description: 'Worship and music ministry' } });
+      // 1. Categories
+      const cat1 = await this.courseCategory.upsert({ where: { name: 'Leadership' }, update: {}, create: { name: 'Leadership', description: 'Ministry leadership courses' } });
+      const cat2 = await this.courseCategory.upsert({ where: { name: 'Theology' }, update: {}, create: { name: 'Theology', description: 'Biblical theology courses' } });
+      const cat3 = await this.courseCategory.upsert({ where: { name: 'Worship' }, update: {}, create: { name: 'Worship', description: 'Worship and music ministry' } });
 
-        // 2. Prayer Categories
-        await this.prayerCategory.upsert({ where: { name: 'Health & Healing' }, update: {}, create: { name: 'Health & Healing' } });
-        await this.prayerCategory.upsert({ where: { name: 'Financial Breakthrough' }, update: {}, create: { name: 'Financial Breakthrough' } });
-        await this.prayerCategory.upsert({ where: { name: 'Family & Relationships' }, update: {}, create: { name: 'Family & Relationships' } });
-        await this.prayerCategory.upsert({ where: { name: 'Spiritual Growth' }, update: {}, create: { name: 'Spiritual Growth' } });
+      // 2. Prayer Categories
+      await this.prayerCategory.upsert({ where: { name: 'Health & Healing' }, update: {}, create: { name: 'Health & Healing' } });
+      await this.prayerCategory.upsert({ where: { name: 'Financial Breakthrough' }, update: {}, create: { name: 'Financial Breakthrough' } });
+      await this.prayerCategory.upsert({ where: { name: 'Family & Relationships' }, update: {}, create: { name: 'Family & Relationships' } });
+      await this.prayerCategory.upsert({ where: { name: 'Spiritual Growth' }, update: {}, create: { name: 'Spiritual Growth' } });
 
-        // 3. Accounts
-        const adminHash = await bcrypt.hash('Admin@12345', 12);
-        await this.user.create({
-          data: {
-            email: 'admin@auramini.com',
-            passwordHash: adminHash,
-            role: 'ADMINISTRATOR',
-            profile: { create: { firstName: 'Aura', lastName: 'Admin', bio: 'Platform administrator' } },
-          },
-        });
+      // 3. User Accounts (Unconditional Upsert to guarantee login works!)
+      const adminHash = await bcrypt.hash('Admin@12345', 12);
+      await this.user.upsert({
+        where: { email: 'admin@auramini.com' },
+        update: { passwordHash: adminHash },
+        create: {
+          email: 'admin@auramini.com',
+          passwordHash: adminHash,
+          role: 'ADMINISTRATOR',
+          profile: { create: { firstName: 'Aura', lastName: 'Admin', bio: 'Platform administrator' } },
+        },
+      });
 
-        const mentorHash = await bcrypt.hash('Mentor@12345', 12);
-        const mentor = await this.user.create({
-          data: {
-            email: 'mentor@auramini.com',
-            passwordHash: mentorHash,
-            role: 'MENTOR',
-            profile: { create: { firstName: 'Dr. Elias', lastName: 'Thorne', bio: 'Senior pastor and leadership coach with 20 years of ministry experience.' } },
-          },
-        });
+      const mentorHash = await bcrypt.hash('Mentor@12345', 12);
+      const mentor = await this.user.upsert({
+        where: { email: 'mentor@auramini.com' },
+        update: { passwordHash: mentorHash },
+        create: {
+          email: 'mentor@auramini.com',
+          passwordHash: mentorHash,
+          role: 'MENTOR',
+          profile: { create: { firstName: 'Dr. Elias', lastName: 'Thorne', bio: 'Senior pastor and leadership coach with 20 years of ministry experience.' } },
+        },
+      });
 
-        const studentHash = await bcrypt.hash('Student@12345', 12);
-        await this.user.create({
-          data: {
-            email: 'student@auramini.com',
-            passwordHash: studentHash,
-            role: 'STUDENT',
-            profile: { create: { firstName: 'Grace', lastName: 'Adeyemi' } },
-          },
-        });
+      const studentHash = await bcrypt.hash('Student@12345', 12);
+      await this.user.upsert({
+        where: { email: 'student@auramini.com' },
+        update: { passwordHash: studentHash },
+        create: {
+          email: 'student@auramini.com',
+          passwordHash: studentHash,
+          role: 'STUDENT',
+          profile: { create: { firstName: 'Grace', lastName: 'Adeyemi' } },
+        },
+      });
 
-        // 4. Courses with Modules & Lessons
+      // 4. Courses with Modules & Lessons (if empty)
+      const courseCount = await this.course.count();
+      if (courseCount === 0) {
         const course1 = await this.course.create({
           data: {
             title: 'The Modern Pastoral Heart',
