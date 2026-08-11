@@ -7,11 +7,11 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: process.env.NODE_ENV === 'production'
+    origin: process.env['NODE_ENV'] === 'production'
       ? [
           /\.vercel\.app$/,
           /\.railway\.app$/,
-          process.env.FRONTEND_URL,
+          process.env['FRONTEND_URL'],
         ].filter(Boolean)
       : true,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
@@ -29,7 +29,7 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api/docs', app, document);
 
-  const port = process.env.PORT || 3001;
+  const port = process.env['PORT'] || 3001;
   await app.listen(port, '0.0.0.0');
   console.log(`🚀 Backend running on port ${port}`);
   console.log(`📚 Swagger docs available at /api/docs`);
