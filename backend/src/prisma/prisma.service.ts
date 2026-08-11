@@ -10,7 +10,8 @@ export class PrismaService extends PrismaClient implements OnModuleInit, OnModul
   async onModuleInit() {
     try {
       await this.$connect();
-      await this.autoSeed();
+      // Run autoSeed asynchronously in background so container responds instantly to HTTP requests!
+      this.autoSeed().catch((err) => console.error('Background seed error:', err));
     } catch (err) {
       console.error('⚠️ Database connection deferred or failed:', err);
     }
@@ -20,21 +21,24 @@ export class PrismaService extends PrismaClient implements OnModuleInit, OnModul
     try {
       console.log('🌱 Checking and seeding ecosystem accounts & data...');
 
-      // 1. User Accounts (Seeded FIRST with individual try-catches to guarantee login!)
-      const adminHash = await bcrypt.hash('Admin@12345', 12);
-      try {
-        await this.user.upsert({
-          where: { email: 'admin@auramini.com' },
-          update: { passwordHash: adminHash },
-          create: {
-            email: 'admin@auramini.com',
-            passwordHash: adminHash,
-            role: 'ADMINISTRATOR',
-            profile: { create: { firstName: 'Aura', lastName: 'Admin', bio: 'Platform administrator' } },
-          },
-        });
-      } catch (e) {
-        console.error('Failed to seed admin user:', e);
+      // 1. User Accounts (Check if admin exists first to avoid unnecessary bcrypt hashing!)
+      const adminExists = await this.user.findUnique({ where: { email: 'admin@auramini.com' } });
+      if (!adminExists) {
+        const adminHash = await bcrypt.hash('Admin@12345', 10);
+        try {
+          await this.user.upsert({
+            where: { email: 'admin@auramini.com' },
+            update: { passwordHash: adminHash },
+            create: {
+              email: 'admin@auramini.com',
+              passwordHash: adminHash,
+              role: 'ADMINISTRATOR',
+              profile: { create: { firstName: 'Aura', lastName: 'Admin', bio: 'Platform administrator' } },
+            },
+          });
+        } catch (e) {
+          console.error('Failed to seed admin user:', e);
+        }
       }
 
       const mentorHash = await bcrypt.hash('Mentor@12345', 12);
